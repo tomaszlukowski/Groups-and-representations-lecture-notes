@@ -54,6 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Lecture 4" href="Lecture4.html" />
     <link rel="prev" title="2. Lecture 2 - Groups" href="Lecture2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,6 +113,26 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    3. Lecture 3 - Group homomorphisms and actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture4.html">
+   4. Lecture 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture5.html">
+   5. Lecture 5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture6.html">
+   6. Lecture 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture7.html">
+   7. Lecture 7
   </a>
  </li>
 </ul>
@@ -207,6 +228,11 @@
    3.1. Group homomorphism
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-actions">
+   3.2. Group actions
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -295,7 +321,7 @@ g^4&amp;(15432)&amp;\begin{pmatrix}\cos(\frac{8\pi}{5})&amp;\sin(\frac{8\pi}{5})
 </div>
 <div class="proposition admonition">
 <p class="admonition-title">Proposition</p>
-<p>Let <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> be a group homomorphism. Then the kernel of <span class="math notranslate nohighlight">\(\Theta\)</span> is a subgroup og <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> be a group homomorphism. Then the kernel of <span class="math notranslate nohighlight">\(\Theta\)</span> is a subgroup of <span class="math notranslate nohighlight">\(G\)</span>.</p>
 </div>
 <div class="example admonition">
 <p class="admonition-title">Examples (Kernel of a homomorphism)</p>
@@ -334,6 +360,48 @@ g^4&amp;(15432)&amp;\begin{pmatrix}\cos(\frac{8\pi}{5})&amp;\sin(\frac{8\pi}{5})
 \]</div>
 </div>
 </div>
+<div class="section" id="group-actions">
+<h2><span class="section-number">3.2. </span>Group actions<a class="headerlink" href="#group-actions" title="Permalink to this headline">¶</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Group action)</p>
+<p>We say that a group <span class="math notranslate nohighlight">\((G,\star)\)</span> acts on a set <span class="math notranslate nohighlight">\(X\)</span> if there is a map:</p>
+<div class="math notranslate nohighlight">
+\[
+G\times X\to X\qquad (g,x)\mapsto g.x
+\]</div>
+<p>such that</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e.x=x\)</span> for all <span class="math notranslate nohighlight">\(x ain X\)</span>, where <span class="math notranslate nohighlight">\(e\)</span> is the identity element in <span class="math notranslate nohighlight">\(G\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((g\star h).x=g.(h.x)\)</span> for all <span class="math notranslate nohighlight">\(x\in X\)</span> and all <span class="math notranslate nohighlight">\(g,h\in G\)</span></p></li>
+</ul>
+</div>
+<p>The conditions in this definition mean that:</p>
+<ul class="simple">
+<li><p>the group identity element “leaves all elements of the set unchanged”</p></li>
+<li><p>the action of the group on the set is compatible with the product in the group</p></li>
+</ul>
+<div class="example admonition">
+<p class="admonition-title">Examples (Group action)</p>
+<ul class="simple">
+<li><p>The group of <span class="math notranslate nohighlight">\(2\times 2\)</span> invertible matrices <span class="math notranslate nohighlight">\(GL_2(\mathbb{R})\)</span> acts on <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> by matrix multiplication. In particular, we can define a map:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+GL_2(\mathbb{R})\times \mathbb{R}^2 \to \mathbb{R}^2\qquad (A,v)\mapsto A v
+\]</div>
+<p>It obeys both conditions in the definition of the group action:
+a) <span class="math notranslate nohighlight">\(\mathbb{I}_2 v=v\)</span>, where <span class="math notranslate nohighlight">\(v\in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{I}_2\)</span> is the identity matrix;
+b) <span class="math notranslate nohighlight">\((AB)v=A(Bv)\)</span> for a pair of matrices <span class="math notranslate nohighlight">\(A,B\)</span></p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(S_n\)</span> be the set of all permutations of <span class="math notranslate nohighlight">\(n\)</span> objects – the symmetric group. Then <span class="math notranslate nohighlight">\(S_n\)</span> acts on the set <span class="math notranslate nohighlight">\(X_n=\{1,2,\ldots,n\}\)</span> in a natural way:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\sigma.i=\sigma(i)\in X_n
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(\sigma\in S_n\)</span>. It is easy to check that both conditions in the definition of group action are satisfied.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -367,6 +435,13 @@ g^4&amp;(15432)&amp;\begin{pmatrix}\cos(\frac{8\pi}{5})&amp;\sin(\frac{8\pi}{5})
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">2. </span>Lecture 2 - Groups</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Lecture4.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Lecture 4</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
