@@ -94,7 +94,7 @@
 # ```{admonition} Proposition
 # :class: proposition
 # 
-# Let $\Theta:G\to H$ be a group homomorphism. Then the kernel of $\Theta$ is a subgroup og $G$.
+# Let $\Theta:G\to H$ be a group homomorphism. Then the kernel of $\Theta$ is a subgroup of $G$.
 # ```
 # 
 # ```{admonition} Examples (Kernel of a homomorphism)
