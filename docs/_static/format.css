@@ -1,0 +1,32 @@
+.admonition.definition {
+    border-left-color: rgba(0,191,255, 1);
+}
+.admonition.definition .admonition-title {
+    background-color: rgba(0,191,255, 0.1);
+}
+.admonition.definition .admonition-title:before {
+    color: rgba(0,191,255, 1);
+    content: '\f02d';
+}
+
+.admonition.example {
+    border-left-color: rgba(50,205,50, 1);
+}
+.admonition.example .admonition-title {
+    background-color: rgba(50,205,50, .1);
+}
+.admonition.example .admonition-title:before {
+    color: rgba(50,205,50, 1);
+    content: '\f328';
+}
+
+admonition.proposition {
+    border-left-color: rgba(255,105,180, 1);
+}
+.admonition.proposition .admonition-title {
+    background-color: rgba(255,105,180, .1);
+}
+.admonition.proposition .admonition-title:before {
+    color: rgba(255,105,180, 1);
+    content: '\f085';
+}
