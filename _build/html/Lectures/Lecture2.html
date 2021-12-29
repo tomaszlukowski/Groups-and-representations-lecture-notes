@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Lecture 2 - Groups &#8212; Groups and Representations</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/format.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Lecture 3 - Group homomorphisms and actions" href="Lecture3.html" />
+    <link rel="prev" title="1. Lecture 1 - Introduction" href="Lecture1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/image.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Groups and Representations</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Groups and Representations
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture1.html">
+   1. Lecture 1 - Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Lecture 2 - Groups
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture3.html">
+   3. Lecture 3 - Group homomorphisms and actions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Lectures/Lecture2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Lectures/Lecture2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-of-a-group">
+   2.1. Definition of a group
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subgroups">
+   2.2. Subgroups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#order-of-an-element">
+   2.3. Order of an element
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#order-of-a-group">
+   2.4. Order of a group
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subgroups-generated-by-elements">
+   2.5. Subgroups generated by elements
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-2-groups">
+<h1><span class="section-number">2. </span>Lecture 2 - Groups<a class="headerlink" href="#lecture-2-groups" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition-of-a-group">
+<h2><span class="section-number">2.1. </span>Definition of a group<a class="headerlink" href="#definition-of-a-group" title="Permalink to this headline">¶</a></h2>
+<p>We start our adventure with groups and representations by defining what we mean by a group. There are two main ingredients in this definition: a group is a set with a (binary) operation defined on it. This means if we take two elements of the set, we can ‘multiply’ them and obtain another element of the same set. Not all sets with binary operations define groups, the operation needs to satisfy additional conditions. In particular, we often want to define more then two elements, and therefore we need to define what we mean by this, for example introducing appropriate brackets, such that at any stage we multiply only two elements at the time. For a binary operation to be a group multiplication, we demand that the operation is associative, which means that the result of multiplying more than two things does not depend on the way in which we put the brackets. Moreover, we demand that there is an identity element of the binary operation, which is an element that does not change the value of other elements when multiplied. Finally, every element should have an inverse element. A formal definition is given below:</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Group)</p>
+<p>A <strong>group</strong> <span class="math notranslate nohighlight">\((G,\star)\)</span> is a set <span class="math notranslate nohighlight">\(G\)</span> tohether with a binary operation</p>
+<div class="math notranslate nohighlight">
+\[ \star:G\times G\to G\]</div>
+<p>satisfying:</p>
+<ul class="simple">
+<li><p><u><em>Closure</em></u>: For all <span class="math notranslate nohighlight">\(a,b\in G\)</span>, the result of the operation <span class="math notranslate nohighlight">\(a\star b\)</span> is also in <span class="math notranslate nohighlight">\(G\)</span></p></li>
+<li><p><u><em>Associativity</em></u>: For all <span class="math notranslate nohighlight">\(a,b,c\in G\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[a\star (b\star c)=(a \star b)\star c\]</div>
+<ul class="simple">
+<li><p><u><em>Identity element</em></u>: There exists an element <span class="math notranslate nohighlight">\(e\in G\)</span> such that for every element <span class="math notranslate nohighlight">\(a\in G\)</span> the following holds:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[e\star a=a\star e=a\]</div>
+<p>Such element is unique and it is called the <em>identity element</em>.</p>
+<ul class="simple">
+<li><p><u><em>Inverse element</em></u>: For each <span class="math notranslate nohighlight">\(a\in G\)</span> there exists an element <span class="math notranslate nohighlight">\(b\in G\)</span>, commonly denoted <span class="math notranslate nohighlight">\(a^{-1}\)</span>, such that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[a\star b=b\star a=e\]</div>
+</div>
+<p>In the definition of a group we do not assume that the binary operation <span class="math notranslate nohighlight">\(\star\)</span> is commutative, and it is important to realise that there are many groups that are not commutative. It is, however, useful to define a special class of groups, called <em>Abelian groups</em>, for which the order in which we multiply elements is not important.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Abelian group)</p>
+<p>A group <span class="math notranslate nohighlight">\(G\)</span> is called an <strong>Abelian group</strong> if in addition to the conditions above it satisfies:</p>
+<ul class="simple">
+<li><p><u><em>Commutativity</em></u>: For all <span class="math notranslate nohighlight">\(a,b\in G\)</span> we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[a\star b=b\star a\]</div>
+</div>
+<p>There are many examples of groups that you already know from your previous studies. We give some examples of the ones that might be new to you below.</p>
+<div class="example admonition">
+<p class="admonition-title">Examples (Group)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\mathbb{Z},+)\)</span> - integer numbers with addition (identity element: <span class="math notranslate nohighlight">\(e=0\)</span>, inverse element: <span class="math notranslate nohighlight">\(a^{-1}=-a\)</span>, it is <em>Abelian</em>)</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{R},+)\)</span> - real numbers with addition (identity element: <span class="math notranslate nohighlight">\(e=0\)</span>, inverse element: <span class="math notranslate nohighlight">\(a^{-1}=-a\)</span>, it is <em>Abelian</em>)</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{R}^+,\cdot)\)</span> - poitive real numbers with multiplication (identity element: <span class="math notranslate nohighlight">\(e=1\)</span>, inverse element: <span class="math notranslate nohighlight">\(a^{-1}=\frac{1}{a}\)</span>, it is <em>Abelian</em>)</p></li>
+<li><p><em>Symmetric group</em>: Let <span class="math notranslate nohighlight">\(X\)</span> be any non-empty set. A <strong>permutation</strong> on <span class="math notranslate nohighlight">\(X\)</span> is a function <span class="math notranslate nohighlight">\(f:X\to X\)</span> such that <span class="math notranslate nohighlight">\(f\)</span> is one-to-one. If <span class="math notranslate nohighlight">\(X\)</span> is a finite set with <span class="math notranslate nohighlight">\(n\)</span> elements then we call the set of all permutations on <span class="math notranslate nohighlight">\(X\)</span> with composition, a symmetric group <span class="math notranslate nohighlight">\(S_n\)</span>.</p></li>
+</ul>
+<p>For <span class="math notranslate nohighlight">\(n=3\)</span>, if <span class="math notranslate nohighlight">\(X=\{1,2,3\}\)</span> then we have six permutations on <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;e=\left(\begin{matrix}1&amp;2&amp;3\\1&amp;2&amp;3\end{matrix}\right)\qquad &amp;(12)=\left(\begin{matrix}1&amp;2&amp;3\\2&amp;1&amp;3\end{matrix}\right)\qquad
+&amp;(13)=\left(\begin{matrix}1&amp;2&amp;3\\3&amp;2&amp;1\end{matrix}\right)\\
+&amp;(23)=\left(\begin{matrix}1&amp;2&amp;3\\1&amp;3&amp;2\end{matrix}\right)\qquad &amp;(123)=\left(\begin{matrix}1&amp;2&amp;3\\2&amp;3&amp;1\end{matrix}\right)\qquad
+&amp;(132)=\left(\begin{matrix}1&amp;2&amp;3\\3&amp;1&amp;2\end{matrix}\right)
+\end{align*}
+\end{split}\]</div>
+<p>The symmetric group <span class="math notranslate nohighlight">\(S_n\)</span> for <span class="math notranslate nohighlight">\(n\leq 3\)</span> is not Abelian, for example</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(132)\circ(12)=\left(\begin{matrix}1&amp;2&amp;3\\3&amp;1&amp;2\end{matrix}\right)\circ\left(\begin{matrix}1&amp;2&amp;3\\2&amp;1&amp;3\end{matrix}\right)=\left(\begin{matrix}1&amp;2&amp;3\\1&amp;3&amp;2\end{matrix}\right)=(23)\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}(12)\circ(132)=\left(\begin{matrix}1&amp;2&amp;3\\2&amp;1&amp;3\end{matrix}\right)\circ \left(\begin{matrix}1&amp;2&amp;3\\3&amp;1&amp;2\end{matrix}\right)=\left(\begin{matrix}1&amp;2&amp;3\\3&amp;2&amp;1\end{matrix}\right)=(13)\end{split}\]</div>
+<p>and therefore <span class="math notranslate nohighlight">\((132)\circ(12)\neq(12)\circ(132)\)</span>.</p>
+<ul class="simple">
+<li><p><em>Alternating group</em>: if the permutation <span class="math notranslate nohighlight">\(f\)</span> on the set <span class="math notranslate nohighlight">\(X\)</span> interchanges just two elements of <span class="math notranslate nohighlight">\(X\)</span>, leaving all the other fixed, then <span class="math notranslate nohighlight">\(f\)</span> is called a <strong>transposition</strong>. Every permutation can be expressed as a product of transpositions. We say that a permutation <span class="math notranslate nohighlight">\(f\)</span> is even (odd) if <span class="math notranslate nohighlight">\(f\)</span> can be expressed as a product of an even (odd) number of transpositions. The set of all even permutations on <span class="math notranslate nohighlight">\(X\)</span> forms a group called the alternating group <span class="math notranslate nohighlight">\(A_n\)</span>.</p></li>
+</ul>
+<p>For <span class="math notranslate nohighlight">\(n=3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;e - \mathrm{zero \,\,transpositions}\\
+&amp;(12), (13),(23) - \mathrm{one \,\,transposition}\\
+&amp;(123)=(13)\circ (12), (132)=(13)\circ(23) - \mathrm{two\,\, transpositions}
+\end{align*}
+\end{split}\]</div>
+<p>Then <span class="math notranslate nohighlight">\(A_3=\{e,(123),(132)\}\)</span>.</p>
+<ul class="simple">
+<li><p><em>Cyclic group</em>: for any <span class="math notranslate nohighlight">\(n\)</span> consider the set <span class="math notranslate nohighlight">\(\mathbb{Z}_n=\{0,1,2,\ldots,n-1\}\)</span> and define a binary operation <span class="math notranslate nohighlight">\(+\,(\textrm{mod}\,\, n)\)</span> which is defined as: to compute <span class="math notranslate nohighlight">\(a+b\,(\mathrm{mod}\,\,n)\)</span>, add the integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, divide the result by <span class="math notranslate nohighlight">\(n\)</span>, and take the remainder. Then <span class="math notranslate nohighlight">\((\mathbb{Z}_n,+\,(\mathrm{mod}\,\,n))\)</span> is a group. Cyclic groups are abelian</p></li>
+</ul>
+<p>For example, <span class="math notranslate nohighlight">\(\mathbb{Z}_4=\{0,1,2,3\}\)</span> with the following multiplication table</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|c|c|c|c}
++\,(\mathrm{mod}\,\, 4)&amp;0&amp;1&amp;2&amp;3\\
+\hline
+0&amp;0&amp;1&amp;2&amp;3\\
+\hline
+1&amp;1&amp;2&amp;3&amp;0\\
+\hline
+2&amp;2&amp;3&amp;0&amp;1\\
+\hline
+3&amp;3&amp;0&amp;1&amp;2
+\end{array}
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="subgroups">
+<h2><span class="section-number">2.2. </span>Subgroups<a class="headerlink" href="#subgroups" title="Permalink to this headline">¶</a></h2>
+<p>Some of the subsets of groups are themselves groups.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Subgroup)</p>
+<p>Given a group <span class="math notranslate nohighlight">\((G,\star)\)</span>, a subset <span class="math notranslate nohighlight">\(H\)</span> of <span class="math notranslate nohighlight">\(G\)</span> is called a <strong>subgroup</strong> of <span class="math notranslate nohighlight">\(G\)</span>, if <span class="math notranslate nohighlight">\(H\)</span> also forms a group under the operation <span class="math notranslate nohighlight">\(\star\)</span>. We denote it by <span class="math notranslate nohighlight">\(H\leq G\)</span>.</p>
+</div>
+<div class="proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>A subset <span class="math notranslate nohighlight">\(H\)</span> of a group <span class="math notranslate nohighlight">\((G,\star)\)</span> is a subgroup if <span class="math notranslate nohighlight">\(H\)</span> is closed under <span class="math notranslate nohighlight">\(\star\)</span> and it contains inverses.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Subgroup)</p>
+<ul class="simple">
+<li><p>For every group <span class="math notranslate nohighlight">\(G\)</span>, the <em>trivial group</em> <span class="math notranslate nohighlight">\(\{e\}\)</span> and the full group <span class="math notranslate nohighlight">\(G\)</span> are subgroups of <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>The set containing all even numbers <span class="math notranslate nohighlight">\(2\mathbb{Z}=\{2n:n\in \mathbb{Z}\}\)</span> with addition is a subgroup of <span class="math notranslate nohighlight">\((\mathbb{Z},+)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\{0,2\},+\,(\mathrm{mod}\,\,4))\)</span> is a subgroup of <span class="math notranslate nohighlight">\((\mathbb{Z}_4,+\,(\mathrm{mod}\,\,4))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\{e,(12)\}\)</span> is a subgroup of <span class="math notranslate nohighlight">\(S_3\)</span></p></li>
+<li><p><em>Center of a group</em>: the set</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+Z(G)=\{x\in G:g\star x=x\star g \mbox{ for all }g\in G\}
+\]</div>
+<p>is a subgroup of <span class="math notranslate nohighlight">\(G\)</span></p>
+</div>
+</div>
+<div class="section" id="order-of-an-element">
+<h2><span class="section-number">2.3. </span>Order of an element<a class="headerlink" href="#order-of-an-element" title="Permalink to this headline">¶</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Order of an element)</p>
+<p>The <strong>order of an element</strong> <span class="math notranslate nohighlight">\(g\in G\)</span> is the smallest positive integer <span class="math notranslate nohighlight">\(m\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+a^m=e
+\]</div>
+<p>We denote the order of <span class="math notranslate nohighlight">\(g\)</span> by <span class="math notranslate nohighlight">\(|g|\)</span>.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Order of an element)</p>
+<ul class="simple">
+<li><p>In <span class="math notranslate nohighlight">\(S_3\)</span> the element <span class="math notranslate nohighlight">\((12)\)</span> has order 2 since <span class="math notranslate nohighlight">\((12)\circ(12)=e\)</span>. Similarly, the element <span class="math notranslate nohighlight">\((123)\)</span> has order 3 since <span class="math notranslate nohighlight">\((123)\circ(123)\circ(123)=e\)</span>.</p></li>
+<li><p>In <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> all elements apart from 0 have infinite order since there is no <span class="math notranslate nohighlight">\(m\)</span> such that <span class="math notranslate nohighlight">\(a+a+\ldots+a=0\)</span> (<span class="math notranslate nohighlight">\(m\)</span> times) for any <span class="math notranslate nohighlight">\(a\in \mathbb{Z}\setminus \{0\}\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="order-of-a-group">
+<h2><span class="section-number">2.4. </span>Order of a group<a class="headerlink" href="#order-of-a-group" title="Permalink to this headline">¶</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Order of a group)</p>
+<p>The <strong>order of a group</strong> <span class="math notranslate nohighlight">\(G\)</span> is its cardinality. We denote the order of <span class="math notranslate nohighlight">\(G\)</span> by <span class="math notranslate nohighlight">\(|G|\)</span>.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Order of a group)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\mathbb{Z},+)\)</span> has an infinite order</p></li>
+<li><p>the cyclic group group <span class="math notranslate nohighlight">\((\mathbb{Z}_n,+\,\mathrm{mod}\,\, n)\)</span> has order <span class="math notranslate nohighlight">\(n\)</span></p></li>
+<li><p>the symmetric group <span class="math notranslate nohighlight">\(S_n\)</span> has order <span class="math notranslate nohighlight">\(n!\)</span>, while the alternating group <span class="math notranslate nohighlight">\(A_n\)</span> has order <span class="math notranslate nohighlight">\(\frac{n!}{2}\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="subgroups-generated-by-elements">
+<h2><span class="section-number">2.5. </span>Subgroups generated by elements<a class="headerlink" href="#subgroups-generated-by-elements" title="Permalink to this headline">¶</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Subgroup generated by an element)</p>
+<p>Let <span class="math notranslate nohighlight">\(g\in G\)</span>. Then the <strong>subgroup generated by <span class="math notranslate nohighlight">\(g\)</span></strong> is</p>
+<div class="math notranslate nohighlight">
+\[
+\langle g\rangle= \{g^k:k\in \mathbb{Z}\}
+\]</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Subgroup generated by an element)</p>
+<ul class="simple">
+<li><p>In <span class="math notranslate nohighlight">\(S_3\)</span>: <span class="math notranslate nohighlight">\(\langle (123) \rangle=\{(123),(123)^2=(132),(123)^3=e\}\)</span></p></li>
+<li><p>In <span class="math notranslate nohighlight">\(S_4\)</span>: <span class="math notranslate nohighlight">\(\langle(12)(34)\rangle=\{(12)(34),((12)(34))^2=e\}\)</span></p></li>
+</ul>
+</div>
+<div class="proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="math notranslate nohighlight">\(g\in G\)</span> and <span class="math notranslate nohighlight">\(H=\langle g\rangle\)</span>. Then <span class="math notranslate nohighlight">\(|H|=|g|\)</span>.</p>
+</div>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Subgroup generated by a set)</p>
+<p>Let <span class="math notranslate nohighlight">\(S\)</span> be a subset containing elements from a group <span class="math notranslate nohighlight">\(G\)</span>. Then the <strong>subgroup generated by <span class="math notranslate nohighlight">\(S\)</span></strong> is</p>
+<div class="math notranslate nohighlight">
+\[
+\langle S\rangle=\{s_1^{k_1}\star s_2^{k_2} \star \ldots \star s_l^{k_l}:l\in\mathbb{N},s_i\in S,k_i\in \mathbb{Z}\}
+\]</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Subgroup generated by a set)</p>
+<ul class="simple">
+<li><p>In <span class="math notranslate nohighlight">\(S_4\)</span>: the subgroup generated by the set containing <span class="math notranslate nohighlight">\((12)\)</span> and <span class="math notranslate nohighlight">\((34)\)</span> is: <span class="math notranslate nohighlight">\(\langle \{(12),(34)\} \rangle=\{e,(12),(34),(12)(34)\}\)</span>. This subgroup is not cyclic, namely it cannot be generated by a single element in <span class="math notranslate nohighlight">\(S_4\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lecture1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Lecture 1 - Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Lecture3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Group homomorphisms and actions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Tomasz Lukowski<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

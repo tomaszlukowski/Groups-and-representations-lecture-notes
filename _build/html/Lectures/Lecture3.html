@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Lecture 3 - Group homomorphisms and actions &#8212; Groups and Representations</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/format.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="2. Lecture 2 - Groups" href="Lecture2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/image.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Groups and Representations</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Groups and Representations
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture1.html">
+   1. Lecture 1 - Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture2.html">
+   2. Lecture 2 - Groups
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Lecture 3 - Group homomorphisms and actions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Lectures/Lecture3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Lectures/Lecture3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-homomorphism">
+   3.1. Group homomorphism
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-3-group-homomorphisms-and-actions">
+<h1><span class="section-number">3. </span>Lecture 3 - Group homomorphisms and actions<a class="headerlink" href="#lecture-3-group-homomorphisms-and-actions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="group-homomorphism">
+<h2><span class="section-number">3.1. </span>Group homomorphism<a class="headerlink" href="#group-homomorphism" title="Permalink to this headline">¶</a></h2>
+<p>In many cases it is possible to have groups that are defined in a completely unrelated way but they have the same Cayley tables. For example, cyclic groups <span class="math notranslate nohighlight">\(C_n={e,g,g^2,\ldots,g^{n-1}}\)</span> can be defined in the following independent ways:</p>
+<ul class="simple">
+<li><p>as the subgroup of <span class="math notranslate nohighlight">\(S_n\)</span> generated by <span class="math notranslate nohighlight">\((123\ldots n)\)</span></p></li>
+<li><p>as the subgroup of <span class="math notranslate nohighlight">\(2\times 2\)</span> invertible matrices generated by <span class="math notranslate nohighlight">\(\begin{pmatrix}\cos(\frac{2\pi}{n})&amp;\sin(\frac{2\pi}{n})\\-\sin(\frac{2\pi}{n})&amp;\cos(\frac{2\pi}{n})\end{pmatrix}\)</span></p></li>
+<li><p>as the group <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> with addition module <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ul>
+<p>Note that these are all different, but their multiplication tables are the same, and we say that as groups they are the same. What can that mean? It must mean that at least there is a one-to-one map between their elements, e.g. take <span class="math notranslate nohighlight">\(n=5\)</span> and make the table:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|ccc}
+\mbox{element in }C_n&amp; \mbox{permutations}&amp;\mbox{matrices}&amp; (\mathbb{Z}_n,+\,(\mathrm{mod}\,\ n))\\\hline
+e&amp;e&amp;\begin{pmatrix}1&amp;0\\ 0&amp;1\end{pmatrix}&amp;0\\
+g&amp;(12345)&amp;\begin{pmatrix}\cos(\frac{2\pi}{5})&amp;\sin(\frac{2\pi}{5})\\ -\sin(\frac{2\pi}{5})&amp;\cos(\frac{2\pi}{5})\end{pmatrix}&amp;1\\
+g^2&amp;(13524)&amp;\begin{pmatrix}\cos(\frac{4\pi}{5})&amp;\sin(\frac{4\pi}{5})\\-\sin(\frac{4\pi}{5})&amp;\cos(\frac{4\pi}{5})\end{pmatrix}&amp;2\\
+g^3&amp;(14253)&amp;\begin{pmatrix}\cos(\frac{6\pi}{5})&amp;\sin(\frac{6\pi}{5})\\-\sin(\frac{6\pi}{5})&amp;\cos(\frac{6\pi}{5})\end{pmatrix}&amp;3\\
+g^4&amp;(15432)&amp;\begin{pmatrix}\cos(\frac{8\pi}{5})&amp;\sin(\frac{8\pi}{5})\\-\sin(\frac{8\pi}{5})&amp;\cos(\frac{8\pi}{5})\end{pmatrix}&amp;4\\
+\end{array}
+\end{split}\]</div>
+<p>But to say the groups are “the same” we need to make sure that the multiplication tables are the same in all these cases. How to make if precise and general? Suppose that we have two groups, <span class="math notranslate nohighlight">\((G,\star)\)</span> and <span class="math notranslate nohighlight">\((H,\cdot)\)</span>, that we suspect to be “the same”. That means there should be a map</p>
+<div class="math notranslate nohighlight">
+\[
+\Theta:G\to H
+\]</div>
+<p>that is a one-to-one map (i.e. a bijection) telling us how to identify any <span class="math notranslate nohighlight">\(g\in G\)</span> with its partner <span class="math notranslate nohighlight">\(\Theta(g)\in H\)</span></p>
+<p>Additionally, it should not matter whether we perform the “multiplication” first in <span class="math notranslate nohighlight">\(G\)</span> and then go to <span class="math notranslate nohighlight">\(H\)</span>, or we go to <span class="math notranslate nohighlight">\(H\)</span> first and multiply the elements there. In other words we demand that:</p>
+<div class="math notranslate nohighlight">
+\[
+\Theta(g_1\star g_2)=\Theta(g_1)\cdot \Theta(g_2)
+\]</div>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Group homomorphism)</p>
+<p>A <strong>group homomorphism</strong> from <span class="math notranslate nohighlight">\((G,\star)\)</span> to <span class="math notranslate nohighlight">\((H,\cdot)\)</span> is a function <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> such that for all <span class="math notranslate nohighlight">\(g_1,g_2\in G\)</span> it holds that</p>
+<div class="math notranslate nohighlight">
+\[
+\Theta(g_1\star g_2)=\Theta(g_1)\cdot \Theta(g_2)
+\]</div>
+</div>
+<p>Not all functions between two groups are group homomorphisms. We can however find a few of them using the groups that we defined in the previous lecture.</p>
+<div class="example admonition">
+<p class="admonition-title">Examples (Group homomorphism)</p>
+<ul class="simple">
+<li><p>For any groups <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(H\)</span> there is always at least one group homomorphism, called the <em>trivial homomorphism</em> that is defined as <span class="math notranslate nohighlight">\(\Theta(g)=e_H\)</span> for all <span class="math notranslate nohighlight">\(g\in G\)</span>. This homomorphism takes all elements of <span class="math notranslate nohighlight">\(G\)</span> and maps them to the identity element in <span class="math notranslate nohighlight">\(H\)</span>.</p></li>
+<li><p>The map</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\Theta: (\mathbb{Z},+)\to (\mathbb{Z},+\,(\mathrm{mod}\,\, n))
+\]</div>
+<p>defined as <span class="math notranslate nohighlight">\(\Theta(z)=z\)</span>, is a group homomorphism.</p>
+<ul class="simple">
+<li><p>The map <span class="math notranslate nohighlight">\(\Theta:S_n\to S_2\)</span> defined as: for <span class="math notranslate nohighlight">\(\sigma\in S_n\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Theta(\sigma)=\begin{cases}e&amp;\mbox{if }\sigma \mbox{ is even}\\(12)&amp;\mbox{if }\sigma \mbox{ is odd}\end{cases}
+\end{split}\]</div>
+</div>
+<p>If we find a homomorphism that is additionally a bijection then we call such homomorphism an isomorphism:</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Isomorphism)</p>
+<p>A group homomorphism <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> is an <strong>isomorphism</strong> if it is one-to-one and onto (it is a bijection). If there exists an isomorphism between two groups <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(H\)</span>, then we say that these groups are <strong>isomorphic</strong>.</p>
+</div>
+<p>Homomorhisms provide a good way to generate subgroups of a given group. Let us first define what we mean by the kernel and the image.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Kernel of a homomorphism)</p>
+<p>Let <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(H\)</span> be groups, and <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> be a group homomorphism. The <strong>kernel of homomorphism <span class="math notranslate nohighlight">\(\Theta\)</span></strong> is the set of all elements in <span class="math notranslate nohighlight">\(G\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
+\mbox{ker}\Theta=\{g\in G:\Theta(g)=e_H\}
+\]</div>
+</div>
+<div class="proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> be a group homomorphism. Then the kernel of <span class="math notranslate nohighlight">\(\Theta\)</span> is a subgroup og <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Kernel of a homomorphism)</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(\theta:\mathbb{Z}\to \mathbb{Z}_n\)</span> defined as <span class="math notranslate nohighlight">\(\Theta(z)=z\)</span>, the kernel is :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\mbox{ker}\Theta=n\mathbb{Z}
+\]</div>
+<p>that is the set of all integers divisible by <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(\Theta:S_n\to S_2\)</span> defined above, the kernel is:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\mbox{ker}\Theta=\{\sigma\in S_n:\sigma \mbox{ is even}\}=A_n
+\]</div>
+</div>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Image of a homomorphism)</p>
+<p>Let <span class="math notranslate nohighlight">\(\Theta:G\to H\)</span> be a group homomorphism. Then the <strong>image of <span class="math notranslate nohighlight">\(\Theta\)</span></strong> is the set:</p>
+<div class="math notranslate nohighlight">
+\[
+\mbox{im}\Theta=\{\Theta(g):g\in G\}
+\]</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Image of a homomorphism)</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(\Theta:S_3\to S_4\)</span> defined as: for <span class="math notranslate nohighlight">\(\sigma=\begin{pmatrix}1&amp;2&amp;3\\ \sigma(1)&amp;\sigma(2)&amp;\sigma(3)\end{pmatrix}\)</span> we have <span class="math notranslate nohighlight">\(\Theta(\sigma)=\begin{pmatrix}1&amp;2&amp;3&amp;4\\ \sigma(1)&amp;\sigma(2)&amp;\sigma(3)&amp;4\end{pmatrix}\)</span>. Then the image of <span class="math notranslate nohighlight">\(\Theta\)</span> is:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\mbox{im}\Theta=\{\sigma\in S_4:\sigma(4)=4\}
+\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lecture2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Lecture 2 - Groups</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Tomasz Lukowski<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

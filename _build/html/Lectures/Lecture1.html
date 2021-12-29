@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Lecture 1 - Introduction &#8212; Groups and Representations</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/format.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Lecture 2 - Groups" href="Lecture2.html" />
+    <link rel="prev" title="Groups and Representations" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/image.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Groups and Representations</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Groups and Representations
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Lecture 1 - Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture2.html">
+   2. Lecture 2 - Groups
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture3.html">
+   3. Lecture 3 - Group homomorphisms and actions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Lectures/Lecture1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Lectures/Lecture1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#symmetries">
+   1.1. Symmetries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-look-at-groups-and-representations">
+   1.2. First look at groups and representations
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span> <span class="k">as</span> <span class="n">Center</span>
+
+<span class="n">Center</span><span class="p">(</span><span class="s2">&quot;&quot;&quot; &lt;style&gt;</span>
+<span class="s2">.output_png {</span>
+<span class="s2">    display: table-cell;</span>
+<span class="s2">    text-align: center;</span>
+<span class="s2">    vertical-align: middle;</span>
+<span class="s2">}</span>
+<span class="s2">&lt;/style&gt; &quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"> <style>
+.output_png {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+</style> </div></div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="lecture-1-introduction">
+<h1><span class="section-number">1. </span>Lecture 1 - Introduction<a class="headerlink" href="#lecture-1-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="symmetries">
+<h2><span class="section-number">1.1. </span>Symmetries<a class="headerlink" href="#symmetries" title="Permalink to this headline">¶</a></h2>
+<p><strong>Symmetries</strong> provide one of the key ideas in modern mathematics and physics. They are naturally associated with the notion of <strong>groups</strong>. A typical problem in this context is to construct a system that behaves in a certain way under the action of a symmetry, for example, a system that is invariant under a given symmetry.</p>
+<p>To tackle this kind of problems, we need to know how the symmetries act on the building blocks of systems and these blocks are often the elements of vector spaces, i.e. vectors. This leads to a natural question of how to classify such actions of groups on vector spaces. The mathematical theory that deals with this question is the <strong>representation theory</strong>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+\mathrm{Physics}&amp;&amp;\mathrm{Mathematics}\\
+\mathrm{symmetry}&amp;\leftrightarrow&amp;\mathrm{group}
+\end{array}
+\end{split}\]</div>
+<p>Many systems in classical and quantum physics are invariant under some symmetry operations. We distinguish two types of symmetries: <strong>discrete</strong> and <strong>continuous</strong> symmetries.</p>
+<p>In the first cathegory we have for example</p>
+<ul class="simple">
+<li><p>reflection (parity) symmetry</p></li>
+<li><p>discrete rotations</p></li>
+<li><p>time reversal</p></li>
+<li><p>CPT symmetry of the Standard Model</p></li>
+</ul>
+<p>Continuous symmetries include:</p>
+<ul class="simple">
+<li><p>time translations</p></li>
+<li><p>space translations</p></li>
+<li><p>spatial rotations</p></li>
+<li><p>Poincare transformations</p></li>
+<li><p>gauge symmetries of quuntum field theories</p></li>
+</ul>
+<p>Each symmetry can be described mathematically using groups and their representations.</p>
+</div>
+<div class="section" id="first-look-at-groups-and-representations">
+<h2><span class="section-number">1.2. </span>First look at groups and representations<a class="headerlink" href="#first-look-at-groups-and-representations" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following square in 2D space:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Polygon</span>
+
+<span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_2=(0,1)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_1=(1,0)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_3=(-1,0)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_4=(0,-1)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Lecture1_2_0.png" src="../_images/Lecture1_2_0.png" />
+</div>
+</div>
+<p>It is symmetric under rotations and reflections. For example: the rotation by <span class="math notranslate nohighlight">\(90^\circ\)</span> clockwise does not change the shape of the square. However, it <strong>permutes</strong> its vertices in the following way:</p>
+<div class="math notranslate nohighlight">
+\[x_1\to x_4\to x_3 \to x_2 \to x_1\]</div>
+<p>We associate a <em>permutation</em> to this symmetry: <span class="math notranslate nohighlight">\((1432)\)</span>.</p>
+<p>Another example: lreflection with respect to the <span class="math notranslate nohighlight">\(x\)</span>-axis. It permutes vertices:</p>
+<div class="math notranslate nohighlight">
+\[x_2 \to x_4 \to x_2,\]</div>
+<p>and <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> are unchanged.
+We associate another permutation to this symmetry: <span class="math notranslate nohighlight">\((1)(3)(24)=(24)\)</span>.</p>
+<p>There are 8 such symmetries in total (four rotations and four reflections):</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e_1=id\)</span> - identity</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_2=(1432)\)</span> - rotation by <span class="math notranslate nohighlight">\(90^\circ\)</span> clockwise</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_3=(13)(24)\)</span> - rotation by <span class="math notranslate nohighlight">\(180^\circ\)</span> clockwise</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_4=(1234)\)</span> - rotation by <span class="math notranslate nohighlight">\(270^\circ\)</span> clockwise</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_5=(24)\)</span> - <span class="math notranslate nohighlight">\(x\)</span>-axis reflection</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_6=(13)\)</span> - <span class="math notranslate nohighlight">\(y\)</span>-axis reflection</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_7=(14)(23)\)</span> - reflection with respect to the top-left to bottom-right diagonal</p></li>
+<li><p><span class="math notranslate nohighlight">\(e_8=(12)(34)\)</span> - reflection with respect to the top-right to bottom-left diagonal</p></li>
+</ul>
+<p>Two symmetries applied one after another is also a symmetry: <span class="math notranslate nohighlight">\(e_2\)</span> followed by <span class="math notranslate nohighlight">\(e_2\)</span> is <span class="math notranslate nohighlight">\(e_3\)</span>. We indicate it as</p>
+<div class="math notranslate nohighlight">
+\[e_2 \star e_2 =e_3\]</div>
+<p>where <span class="math notranslate nohighlight">\(\star\)</span> is a multiplication of group elements (binary operation). This can be done using vertex permutations:</p>
+<div class="math notranslate nohighlight">
+\[(1432)\circ(1432) =(13)(24)\]</div>
+<p>where we used the symbol <span class="math notranslate nohighlight">\(\circ\)</span> to indicate multiplication (composition) of permutations.</p>
+<p>One can construct a table collecting all results of multiplications of two symmetries - <strong>Cayley table</strong>.</p>
+<p>This group is called the <strong>dihedral group <span class="math notranslate nohighlight">\(D_4\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c||c|c|c|c|c|c|c|c}
+\star&amp;e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6&amp;e_7&amp;e_8\\
+\hline
+\hline
+e_1&amp;e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6&amp;e_7&amp;e_8\\
+\hline
+e_2&amp;e_2&amp;e_3&amp;e_4&amp;e_1&amp;e_7&amp;e_8&amp;e_6&amp;e_5\\
+\hline
+e_3&amp;e_3&amp;e_4&amp;e_1&amp;e_2&amp;e_6&amp;e_5&amp;e_8&amp;e_7\\
+\hline
+e_4&amp;e_4&amp;e_1&amp;e_2&amp;e_3&amp;e_8&amp;e_7&amp;e_5&amp;e_6\\
+\hline
+e_5&amp;e_5&amp;e_8&amp;e_6&amp;e_7&amp;e_1&amp;e_3&amp;e_4&amp;e_2\\
+\hline
+e_6&amp;e_6&amp;e_7&amp;e_5&amp;e_8&amp;e_3&amp;e_1&amp;e_2&amp;e_4\\
+\hline
+e_7&amp;e_7&amp;e_5&amp;e_8&amp;e_6&amp;e_2&amp;e_4&amp;e_1&amp;e_3\\
+\hline
+e_8&amp;e_8&amp;e_6&amp;e_7&amp;e_5&amp;e_4&amp;e_2&amp;e_3&amp;e_1
+\end{array}
+\end{split}\]</div>
+<p>Some important observations from this table:</p>
+<ul class="simple">
+<li><p>each element appears only once in each column and in each row</p></li>
+<li><p>the element <span class="math notranslate nohighlight">\(e_1\)</span> acts as the identity element, namely</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[e_1 \star e_i=e_i\star e_1=e_i\]</div>
+<ul class="simple">
+<li><p>every element has its inverse, i.e. for each <span class="math notranslate nohighlight">\(e_i\)</span> there exists <span class="math notranslate nohighlight">\(e_j\)</span> such that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[e_i\star e_j=e_j\star e_i=e_1\]</div>
+<p>These are common properties for all groups.</p>
+<p>Groups are very abstract mathematical objects that are defined as a set with binary operation of its elements satisfying a series of conditions. We are interested in representing these elements in such a way that we can see how group elements act on the square. We can do it by associating <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices to each group element:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;e_1 \to \begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\qquad &amp; e_2 \to \begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}\qquad
+&amp;e_3 \to \begin{pmatrix}-1&amp;0\\0&amp;-1\end{pmatrix}\qquad &amp; e_4 \to \begin{pmatrix}0&amp;-1\\1&amp;0\end{pmatrix}\\
+&amp;e_5 \to \begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}\qquad &amp; e_6 \to \begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}\qquad
+&amp;e_7 \to \begin{pmatrix}0&amp;-1\\-1&amp;0\end{pmatrix}\qquad &amp; e_8 \to \begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}\\
+\end{align*}
+\end{split}\]</div>
+<p>These matrices satisfy the same multiplication table as the group elements. We call these set of matrices a representation of group <span class="math notranslate nohighlight">\(D_4\)</span>. This is not the only representation and we will discuss many more of them in this module.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Groups and Representations</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Lecture2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Lecture 2 - Groups</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Tomasz Lukowski<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
