@@ -138,6 +138,53 @@
 # 
 # 
 # ```
+# 
+# ## Group actions
+# 
+# ```{admonition} Definition (Group action)
+# :class: definition
+# 
+# We say that a group $(G,\star)$ acts on a set $X$ if there is a map:
+# 
+# $$
+# G\times X\to X\qquad (g,x)\mapsto g.x
+# $$
+# 
+# such that 
+# - $e.x=x$ for all $x ain X$, where $e$ is the identity element in $G$
+# - $(g\star h).x=g.(h.x)$ for all $x\in X$ and all $g,h\in G$
+# 
+# ```
+# 
+# The conditions in this definition mean that:
+# - the group identity element "leaves all elements of the set unchanged"
+# - the action of the group on the set is compatible with the product in the group
+# 
+# ```{admonition} Examples (Group action)
+# :class: example
+# 
+# - The group of $2\times 2$ invertible matrices $GL_2(\mathbb{R})$ acts on $\mathbb{R}^2$ by matrix multiplication. In particular, we can define a map:
+# 
+# $$
+# GL_2(\mathbb{R})\times \mathbb{R}^2 \to \mathbb{R}^2\qquad (A,v)\mapsto A v
+# $$
+# 
+# It obeys both conditions in the definition of the group action:
+# a) $\mathbb{I}_2 v=v$, where $v\in \mathbb{R}^2$ and $\mathbb{I}_2$ is the identity matrix;
+# b) $(AB)v=A(Bv)$ for a pair of matrices $A,B$
+# 
+# - Let $S_n$ be the set of all permutations of $n$ objects -- the symmetric group. Then $S_n$ acts on the set $X_n=\{1,2,\ldots,n\}$ in a natural way:
+# 
+# $$
+# \sigma.i=\sigma(i)\in X_n
+# $$
+# 
+# for all $\sigma\in S_n$. It is easy to check that both conditions in the definition of group action are satisfied.
+# 
+# 
+# ```
+# 
+# 
 
 # In[ ]:
 

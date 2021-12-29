@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Lecture 5 &#8212; Groups and Representations</title>
+    <title>5. Lecture 5 - Irreducible representations &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -43,6 +43,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Lecture 6" href="Lecture6.html" />
-    <link rel="prev" title="4. Lecture 4" href="Lecture4.html" />
+    <link rel="prev" title="4. Lecture 4 - Linear representations" href="Lecture4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,12 +117,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture4.html">
-   4. Lecture 4
+   4. Lecture 4 - Linear representations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Lecture 5
+   5. Lecture 5 - Irreducible representations
   </a>
  </li>
  <li class="toctree-l1">
@@ -216,6 +218,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subrepresentations">
+   5.1. Subrepresentations
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -224,8 +239,16 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5">
-<h1><span class="section-number">5. </span>Lecture 5<a class="headerlink" href="#lecture-5" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5-irreducible-representations">
+<h1><span class="section-number">5. </span>Lecture 5 - Irreducible representations<a class="headerlink" href="#lecture-5-irreducible-representations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subrepresentations">
+<h2><span class="section-number">5.1. </span>Subrepresentations<a class="headerlink" href="#subrepresentations" title="Permalink to this headline">¶</a></h2>
+<p>A subrepresentation is a subvector space that is also a representation of <span class="math notranslate nohighlight">\(G\)</span> under the same action.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Subrepresentation)</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a linear representation of a group <span class="math notranslate nohighlight">\(G\)</span>. A subspace <span class="math notranslate nohighlight">\(W\)</span> of <span class="math notranslate nohighlight">\(V\)</span> is a subrepresentation if <span class="math notranslate nohighlight">\(W\)</span> is invariant under <span class="math notranslate nohighlight">\(G\)</span> - that is, if <span class="math notranslate nohighlight">\(g.w\in W\)</span> for all <span class="math notranslate nohighlight">\(g\in G\)</span> and all <span class="math notranslate nohighlight">\(w\in W\)</span>.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -257,7 +280,7 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Lecture 4</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Lecture 4 - Linear representations</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lecture6.html" title="next page">

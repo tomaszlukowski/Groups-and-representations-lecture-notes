@@ -228,6 +228,11 @@
    3.1. Group homomorphism
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-actions">
+   3.2. Group actions
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -353,6 +358,48 @@ g^4&amp;(15432)&amp;\begin{pmatrix}\cos(\frac{8\pi}{5})&amp;\sin(\frac{8\pi}{5})
 \[
 \mbox{im}\Theta=\{\sigma\in S_4:\sigma(4)=4\}
 \]</div>
+</div>
+</div>
+<div class="section" id="group-actions">
+<h2><span class="section-number">3.2. </span>Group actions<a class="headerlink" href="#group-actions" title="Permalink to this headline">¶</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Group action)</p>
+<p>We say that a group <span class="math notranslate nohighlight">\((G,\star)\)</span> acts on a set <span class="math notranslate nohighlight">\(X\)</span> if there is a map:</p>
+<div class="math notranslate nohighlight">
+\[
+G\times X\to X\qquad (g,x)\mapsto g.x
+\]</div>
+<p>such that</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e.x=x\)</span> for all <span class="math notranslate nohighlight">\(x ain X\)</span>, where <span class="math notranslate nohighlight">\(e\)</span> is the identity element in <span class="math notranslate nohighlight">\(G\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((g\star h).x=g.(h.x)\)</span> for all <span class="math notranslate nohighlight">\(x\in X\)</span> and all <span class="math notranslate nohighlight">\(g,h\in G\)</span></p></li>
+</ul>
+</div>
+<p>The conditions in this definition mean that:</p>
+<ul class="simple">
+<li><p>the group identity element “leaves all elements of the set unchanged”</p></li>
+<li><p>the action of the group on the set is compatible with the product in the group</p></li>
+</ul>
+<div class="example admonition">
+<p class="admonition-title">Examples (Group action)</p>
+<ul class="simple">
+<li><p>The group of <span class="math notranslate nohighlight">\(2\times 2\)</span> invertible matrices <span class="math notranslate nohighlight">\(GL_2(\mathbb{R})\)</span> acts on <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> by matrix multiplication. In particular, we can define a map:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+GL_2(\mathbb{R})\times \mathbb{R}^2 \to \mathbb{R}^2\qquad (A,v)\mapsto A v
+\]</div>
+<p>It obeys both conditions in the definition of the group action:
+a) <span class="math notranslate nohighlight">\(\mathbb{I}_2 v=v\)</span>, where <span class="math notranslate nohighlight">\(v\in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{I}_2\)</span> is the identity matrix;
+b) <span class="math notranslate nohighlight">\((AB)v=A(Bv)\)</span> for a pair of matrices <span class="math notranslate nohighlight">\(A,B\)</span></p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(S_n\)</span> be the set of all permutations of <span class="math notranslate nohighlight">\(n\)</span> objects – the symmetric group. Then <span class="math notranslate nohighlight">\(S_n\)</span> acts on the set <span class="math notranslate nohighlight">\(X_n=\{1,2,\ldots,n\}\)</span> in a natural way:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\sigma.i=\sigma(i)\in X_n
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(\sigma\in S_n\)</span>. It is easy to check that both conditions in the definition of group action are satisfied.</p>
 </div>
 </div>
 </div>
