@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Lecture 5 - Irreducible representations &#8212; Groups and Representations</title>
+    <title>5. Lecture 5 - Subrepresentations &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -122,7 +122,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Lecture 5 - Irreducible representations
+   5. Lecture 5 -  Subrepresentations
   </a>
  </li>
  <li class="toctree-l1">
@@ -228,6 +228,16 @@
    5.1. Subrepresentations
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#direct-sum-of-representations">
+   5.2. Direct sum of representations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#searching-for-subrepresentations">
+   5.3. Searching for subrepresentations
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -239,8 +249,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5-irreducible-representations">
-<h1><span class="section-number">5. </span>Lecture 5 - Irreducible representations<a class="headerlink" href="#lecture-5-irreducible-representations" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5-subrepresentations">
+<h1><span class="section-number">5. </span>Lecture 5 -  Subrepresentations<a class="headerlink" href="#lecture-5-subrepresentations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="subrepresentations">
 <h2><span class="section-number">5.1. </span>Subrepresentations<a class="headerlink" href="#subrepresentations" title="Permalink to this headline">¶</a></h2>
 <p>A subrepresentation is a subvector space that is also a representation of <span class="math notranslate nohighlight">\(G\)</span> under the same action.</p>
@@ -248,6 +258,125 @@
 <p class="admonition-title">Definition (Subrepresentation)</p>
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a linear representation of a group <span class="math notranslate nohighlight">\(G\)</span>. A subspace <span class="math notranslate nohighlight">\(W\)</span> of <span class="math notranslate nohighlight">\(V\)</span> is a subrepresentation if <span class="math notranslate nohighlight">\(W\)</span> is invariant under <span class="math notranslate nohighlight">\(G\)</span> - that is, if <span class="math notranslate nohighlight">\(g.w\in W\)</span> for all <span class="math notranslate nohighlight">\(g\in G\)</span> and all <span class="math notranslate nohighlight">\(w\in W\)</span>.</p>
 </div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Subrepresentation)</p>
+<ul class="simple">
+<li><p>Every subspace is a subrepresentation of the trivial representation on any vector space since the trivial <span class="math notranslate nohighlight">\(G\)</span> action takes every subspace back to itself</p></li>
+<li><p>The tautological representation of <span class="math notranslate nohighlight">\(D_4\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> has no proper non-zero subrepresentations because there is no line taken back to itself under every symmetry of the square, that is, there is no line left invariant by <span class="math notranslate nohighlight">\(D_4\)</span>.</p></li>
+<li><p>The vertex permutation representation of <span class="math notranslate nohighlight">\(D_4\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>, induced by the action of <span class="math notranslate nohighlight">\(D_4\)</span> on a set of basis elements <span class="math notranslate nohighlight">\(\{e_1,e_2,e_3,e_4\}\)</span> indexed by the vertices of a square does have a proper non-trivial subrepresentation. For example, the one dimensional subspace spanned by <span class="math notranslate nohighlight">\(e_1+e_2+e_3+e_4\)</span> is fixed by <span class="math notranslate nohighlight">\(D_4\)</span> – when <span class="math notranslate nohighlight">\(D_4\)</span> acts, it permutes <span class="math notranslate nohighlight">\(e_i\)</span> so their sum remains unchanged. Therefore, for all <span class="math notranslate nohighlight">\(g\in D_4\)</span>, we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+g.(\lambda,\lambda,\lambda,\lambda)=(\lambda,\lambda,\lambda,\lambda)
+\]</div>
+<p>for all vectors in the one-dimensional subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>. Then, <span class="math notranslate nohighlight">\(D_4\)</span> acts trivially on this one-dimensional subrepresentation.</p>
+<ul class="simple">
+<li><p>Another representation of the vertex permutation representation of <span class="math notranslate nohighlight">\(D_4\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> is the subspace <span class="math notranslate nohighlight">\(W\subset \mathbb{R}^4\)</span> of vectors whose coordinates sum to 0. When <span class="math notranslate nohighlight">\(D_4\)</span> acts by permutinf the coordinates, it leaves their sum unchanged, For example, <span class="math notranslate nohighlight">\(B\)</span> sends <span class="math notranslate nohighlight">\((1,2,3,-6)\)</span> to <span class="math notranslate nohighlight">\((-6,3,2,1)\)</span> if vectors are labelled counterclockwise from the upper right. The space <span class="math notranslate nohighlight">\(W\)</span> is a three-dimensional representation of <span class="math notranslate nohighlight">\(D_4\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>. Note that <span class="math notranslate nohighlight">\(W\)</span> is a non-trivial subrepresentation since the elements of <span class="math notranslate nohighlight">\(G\)</span> do move the vectors around in the space <span class="math notranslate nohighlight">\(W\)</span>.</p></li>
+<li><p>The standard representaion of <span class="math notranslate nohighlight">\(S_n\)</span>: Let <span class="math notranslate nohighlight">\(S_n\)</span> acts on a vector space of dimension <span class="math notranslate nohighlight">\(n\)</span>, say <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, by permuting the <span class="math notranslate nohighlight">\(n\)</span> vectors of a fixed basis. Note that the subspace spanned by the sum of the basis vectors is fixed by the action of <span class="math notranslate nohighlight">\(S_n\)</span> – it is a subrepresentation on which <span class="math notranslate nohighlight">\(S_n\)</span> acts trivially. More interestingly, the <span class="math notranslate nohighlight">\((n-1)\)</span>-dimensional subspace</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+W=\left\{\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}:\sum_{i=1}^n x_i=0\right\} \subset\mathbb{R}^n
+\end{split}\]</div>
+<p>is also invariant under the permutation action. This is called the standard representation of <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
+</div>
+</div>
+<div class="section" id="direct-sum-of-representations">
+<h2><span class="section-number">5.2. </span>Direct sum of representations<a class="headerlink" href="#direct-sum-of-representations" title="Permalink to this headline">¶</a></h2>
+<p>For representations that have non-zero subrepresentations, it is always possible to simplify the matrix representatives in such a way that all subrepresentations are clearly visible, as blocks in these matrices. Let us take the permutation representation of <span class="math notranslate nohighlight">\(S_4\)</span>, <span class="math notranslate nohighlight">\(\rho:S_3\to GL(\mathbb{R}^3)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+e\mapsto \begin{pmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}, \qquad (12)\mapsto \begin{pmatrix}0&amp;1&amp;0\\1&amp;0&amp;0\\0&amp;0&amp;1\end{pmatrix}, \qquad (13)\mapsto \begin{pmatrix}0&amp;0&amp;1\\0&amp;1&amp;0\\1&amp;0&amp;0\end{pmatrix}\\
+(23)\mapsto \begin{pmatrix}1&amp;0&amp;0\\0&amp;0&amp;1\\0&amp;1&amp;0\end{pmatrix}, \qquad (123)\mapsto \begin{pmatrix}0&amp;0&amp;1\\1&amp;0&amp;0\\0&amp;1&amp;0\end{pmatrix}, \qquad (132)\mapsto \begin{pmatrix}0&amp;1&amp;0\\0&amp;0&amp;1\\1&amp;0&amp;0\end{pmatrix}
+\end{align*}
+\end{split}\]</div>
+<p>We know that it does have two subrepresentations:</p>
+<ul class="simple">
+<li><p>a one-dimensional trivial representation</p></li>
+<li><p>a two-dimensional standard representation</p></li>
+</ul>
+<p>Let us define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M=\begin{pmatrix}1&amp;-\frac{1}{2}&amp;-\frac{1}{2}\\0&amp;\frac{\sqrt{3}}{2}&amp;-\frac{\sqrt{3}}{2}\\1&amp;1&amp;1\end{pmatrix}
+\end{split}\]</div>
+<p>Then by direct calculation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+M \rho(e) M^{-1} =\begin{pmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{pmatrix}\qquad M \rho((12)) M^{-1} =\begin{pmatrix}-\frac{1}{2}&amp;\frac{\sqrt{3}}{2}&amp;0\\\frac{\sqrt{3}}{2}&amp;\frac{1}{2}&amp;0\\0&amp;0&amp;1\end{pmatrix}\\
+M \rho((13)) M^{-1} =\begin{pmatrix}-\frac{1}{2}&amp;-\frac{\sqrt{3}}{2}&amp;0\\-\frac{\sqrt{3}}{2}&amp;\frac{1}{2}&amp;0\\0&amp;0&amp;1\end{pmatrix}\qquad M \rho((23)) M^{-1} =\begin{pmatrix}1&amp;0&amp;0\\0&amp;-1&amp;0\\0&amp;0&amp;1\end{pmatrix}\\
+M \rho((123)) M^{-1} =\begin{pmatrix}-\frac{1}{2}&amp;-\frac{\sqrt{3}}{2}&amp;0\\\frac{\sqrt{3}}{2}&amp;-\frac{1}{2}&amp;0\\0&amp;0&amp;1\end{pmatrix}\qquad M \rho((132)) M^{-1} =\begin{pmatrix}-\frac{1}{2}&amp;\frac{\sqrt{3}}{2}&amp;0\\-\frac{\sqrt{3}}{2}&amp;-\frac{1}{2}&amp;0\\0&amp;0&amp;1\end{pmatrix}\\
+\end{align*}
+\end{split}\]</div>
+<p>All these matrices are block-diagonal with a two-dimensional block and a one-dimensional block. By multiplying by <span class="math notranslate nohighlight">\(M\)</span> from the left and <span class="math notranslate nohighlight">\(M^{-1}\)</span> from the right we just changed the basis of the three-dimensional space. This change of basis exposed the seubrepresentations of the permutation representation of <span class="math notranslate nohighlight">\(S_3\)</span>.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Direct sum of representations)</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(G\)</span> acts on vector spaces <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span>. We can define an action of <span class="math notranslate nohighlight">\(G\)</span> coordinate-wise on their direct sum as:</p>
+<div class="math notranslate nohighlight">
+\[
+g.(v,w)=(g.v,g.w)\in V\oplus W
+\]</div>
+<p>The matrix associated to every <span class="math notranslate nohighlight">\(g\)</span> acting on <span class="math notranslate nohighlight">\(V\oplus W\)</span> will be a block diagonal matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+\rho_1(g)&amp;0\\0&amp;\rho_2(g)
+\end{pmatrix}
+\end{split}\]</div>
+<p>obtained from the <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(\rho_1(g)\)</span> describing the action of <span class="math notranslate nohighlight">\(g\)</span> on <span class="math notranslate nohighlight">\(V\)</span>, and the <span class="math notranslate nohighlight">\(m\times m\)</span> matrix <span class="math notranslate nohighlight">\(\rho_2(g)\)</span> describing the action of <span class="math notranslate nohighlight">\(g\)</span> on <span class="math notranslate nohighlight">\(W\)</span>. We call <span class="math notranslate nohighlight">\(V\oplus W\)</span> the direct sum of representations of <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+<p>We are interested in decomposing representations in direct susm of their subrepresentations. To do it we need one more notion:</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Isomorphic representations)</p>
+<p>Two representations <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> of <span class="math notranslate nohighlight">\(G\)</span> are isomorphic if there is a vector space isomorphism between them that preserves the action of <span class="math notranslate nohighlight">\(G\)</span>, that is, if there exists an isomorphism <span class="math notranslate nohighlight">\(\phi:V\to W\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+R_V(g)=\phi^{-1}\circ R_W(g)\circ \phi
+\]</div>
+<p>for all <span class="math notranslate nohighlight">\(g\in G\)</span>, where <span class="math notranslate nohighlight">\(R_V:G\to GL(V)\)</span> and <span class="math notranslate nohighlight">\(R_W:G\to GL(W)\)</span> are two representations.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Isomorphic representations)</p>
+<p>We have shown that there exists a matrix <span class="math notranslate nohighlight">\(M\)</span> such that for all <span class="math notranslate nohighlight">\(g\in S_3\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M R(g) M^{-1}=\begin{pmatrix}R_1(g)&amp;0\\0&amp;R_2(g)\end{pmatrix}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the permutation representation of <span class="math notranslate nohighlight">\(S_3\)</span>, <span class="math notranslate nohighlight">\(R_1\)</span> is the standard representation of <span class="math notranslate nohighlight">\(S_3\)</span>, and <span class="math notranslate nohighlight">\(R_2\)</span> is the trivial representation of <span class="math notranslate nohighlight">\(S_3\)</span>. This implies that</p>
+<div class="math notranslate nohighlight">
+\[
+R\cong R_1\oplus R_2
+\]</div>
+</div>
+</div>
+<div class="section" id="searching-for-subrepresentations">
+<h2><span class="section-number">5.3. </span>Searching for subrepresentations<a class="headerlink" href="#searching-for-subrepresentations" title="Permalink to this headline">¶</a></h2>
+<p>Let us consider the following four-dimensional representation <span class="math notranslate nohighlight">\(V\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> (called the vertex permutation representation):</p>
+<ul class="simple">
+<li><p>for the rotation: $A \mapsto \begin{pmatrix}0&amp;0&amp;0&amp;1\1&amp;0&amp;0&amp;0\0&amp;1&amp;0&amp;0\0&amp;0&amp;1&amp;0\end{pmatrix}</p></li>
+<li><p>for the horizontal reflection: $B \mapsto \begin{pmatrix}0&amp;1&amp;0&amp;0\1&amp;0&amp;0&amp;0\0&amp;0&amp;0&amp;1\0&amp;0&amp;1&amp;0\end{pmatrix}</p></li>
+</ul>
+<p>The remaining matrices can be found using the fact that we have a group representation, i.e. it is a group homomorphism. For example</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^2=A\cdot A\mapsto \phi(A)\cdot \phi(A)=\begin{pmatrix}0&amp;0&amp;0&amp;1\\1&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0\\0&amp;0&amp;1&amp;0\end{pmatrix} ^2=\begin{pmatrix}0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;1\\1&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0\end{pmatrix} 
+\end{split}\]</div>
+<p>We want to find all subrepresentations of <span class="math notranslate nohighlight">\(V\)</span>. To find interesting subrepresentations of <span class="math notranslate nohighlight">\(V\)</span>, we can look for non-zero vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> whose orbits under the action of <span class="math notranslate nohighlight">\(D_4\)</span> span proper subspaces of <span class="math notranslate nohighlight">\(V\)</span>. One way is to find vectors with small orbits. For example, the vector <span class="math notranslate nohighlight">\((1,1,1,1)\)</span> is fixed by <span class="math notranslate nohighlight">\(D_4\)</span>. It spans a one-dimensional subrepresentation of <span class="math notranslate nohighlight">\(V\)</span> where <span class="math notranslate nohighlight">\(D_4\)</span> acts trivially.</p>
+<p>Another vector with a small orbit is <span class="math notranslate nohighlight">\(w=(-1,1,-1,1)\)</span>. Note that <span class="math notranslate nohighlight">\(A\)</span> acts on <span class="math notranslate nohighlight">\(w\)</span> to produce <span class="math notranslate nohighlight">\((1,-1,1,-1)=-w\)</span>. Also the reflection <span class="math notranslate nohighlight">\(B\)</span> acts the same way and produces <span class="math notranslate nohighlight">\(-w\)</span>. All other elements of <span class="math notranslate nohighlight">\(D_4\)</span> act by superpositions of these two elements, and therefore the orbit of <span class="math notranslate nohighlight">\(w\)</span> is just <span class="math notranslate nohighlight">\(\{w,-w\}\)</span>. Thus the one-dimensional subspace spanned by <span class="math notranslate nohighlight">\(w\)</span> is a subrepresentation of <span class="math notranslate nohighlight">\(V\)</span>. This is not a trivial representation since some elements act by the multiplication by <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+<p>There is also a two-dimensional subrepresentation of <span class="math notranslate nohighlight">\(V\)</span> that can be found by considering the orbit of <span class="math notranslate nohighlight">\(u=(1,1,-1,-1)\)</span>. Its orbit is:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm(Orb)(u)=\{(1,1,-1,-1),(-1,1,1,-1),(-1,-1,1,1),(1-1,-1,1)\}
+\]</div>
+<p>that are points on a two-dimensional subspace <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that has a basis <span class="math notranslate nohighlight">\((1,1,-1,-1)\)</span> and <span class="math notranslate nohighlight">\((-1,1,1,-1)\)</span>. It is easy to check that the vertex representation action of <span class="math notranslate nohighlight">\(D_4\)</span> on <span class="math notranslate nohighlight">\(T\)</span> is identical with the tautological representation of <span class="math notranslate nohighlight">\(D_4\)</span> on this two-plane.</p>
+<p>Finally, since the three subrepresentations described above span <span class="math notranslate nohighlight">\(V\)</span>, there is a direct sum decomposition of representations:</p>
+<div class="math notranslate nohighlight">
+\[
+V\cong T\oplus \mathbb{R}(1,1,1,1)\oplus \mathbb{R} (1,-1,1,-1)
+\]</div>
+<p>Importantly, none of these subrepresentations can be further decomposed.</p>
 </div>
 </div>
 
