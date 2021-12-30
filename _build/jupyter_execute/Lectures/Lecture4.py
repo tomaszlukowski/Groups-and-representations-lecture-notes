@@ -155,7 +155,7 @@
 # $$
 # \begin{align*}
 # e\mapsto \begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}, \qquad (12)\mapsto \begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix}, \qquad (13)\mapsto \begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}\\
-# (23)\mapsto \begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix}, \qquad (123)\mapsto \begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix}, \qquad (132)\mapsto \begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}\\
+# (23)\mapsto \begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix}, \qquad (123)\mapsto \begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix}, \qquad (132)\mapsto \begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}
 # \end{align*}
 # $$
 # 
