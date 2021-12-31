@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lecture 2 - Groups
+# # Groups
 # 
 # ## Definition of a group
 # 

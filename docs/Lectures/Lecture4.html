@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Lecture 4 - Linear representations &#8212; Groups and Representations</title>
+    <title>4. Linear representations &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Lecture 5 - Subrepresentations" href="Lecture5.html" />
-    <link rel="prev" title="3. Lecture 3 - Group homomorphisms and actions" href="Lecture3.html" />
+    <link rel="next" title="5. Subrepresentations" href="Lecture5.html" />
+    <link rel="prev" title="3. Group homomorphisms and group actions" href="Lecture3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -102,37 +102,57 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture1.html">
-   1. Lecture 1 - Introduction
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture2.html">
-   2. Lecture 2 - Groups
+   2. Groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture3.html">
-   3. Lecture 3 - Group homomorphisms and actions
+   3. Group homomorphisms and group actions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Lecture 4 - Linear representations
+   4. Linear representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture5.html">
-   5. Lecture 5 -  Subrepresentations
+   5. Subrepresentations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture6.html">
-   6. Lecture 6
+   6. Irreducible representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture7.html">
-   7. Lecture 7
+   7. Character Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture8.html">
+   8. Classification of representations for symmetric groups
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture9.html">
+   9. Applications of representation theory to physics problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture10.html">
+   10. Representations of matrix groups
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture11.html">
+   11. Representations of matrix groups relevant to physics
   </a>
  </li>
 </ul>
@@ -229,7 +249,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-representations">
+  <a class="reference internal nav-link" href="#id1">
    4.2. Linear representations
   </a>
  </li>
@@ -244,8 +264,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-4-linear-representations">
-<h1><span class="section-number">4. </span>Lecture 4 - Linear representations<a class="headerlink" href="#lecture-4-linear-representations" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="linear-representations">
+<h1><span class="section-number">4. </span>Linear representations<a class="headerlink" href="#linear-representations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="matrix-groups">
 <h2><span class="section-number">4.1. </span>Matrix groups<a class="headerlink" href="#matrix-groups" title="Permalink to this headline">¶</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(M_n\)</span> be the set of all <span class="math notranslate nohighlight">\(n\times n\)</span> matrices <span class="math notranslate nohighlight">\(A=(a_{ij})\)</span>, <span class="math notranslate nohighlight">\(i,j=1,2,\ldots,n\)</span>. The identity matrix <span class="math notranslate nohighlight">\(\mathbb{I}_n\)</span> is the matrix with all diagonal entries equal to 1 and the remaining entries equal to 0:</p>
@@ -306,8 +326,8 @@ A\cdot B=B\cdot A=\mathbb{I}_n
 Lor=\{A\in GL_4(\mathbb{R}):A^T\eta A=\eta\}\subset GL_4(\mathbb{R})
 \]</div>
 </div>
-<div class="section" id="linear-representations">
-<h2><span class="section-number">4.2. </span>Linear representations<a class="headerlink" href="#linear-representations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2><span class="section-number">4.2. </span>Linear representations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Before defining linear representations of groups, let us recall from linear algebra the definition of a vector space and a linear map.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Vector space)</p>
@@ -415,13 +435,13 @@ for any <span class="math notranslate nohighlight">\(n\)</span>, there exists a 
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Group homomorphisms and actions</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Group homomorphisms and group actions</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lecture5.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Lecture 5 -  Subrepresentations</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Subrepresentations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

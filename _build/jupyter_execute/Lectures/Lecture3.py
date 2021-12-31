@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lecture 3 - Group homomorphisms and actions
+# # Group homomorphisms and group actions
 # 
 # ## Group homomorphism
 # 

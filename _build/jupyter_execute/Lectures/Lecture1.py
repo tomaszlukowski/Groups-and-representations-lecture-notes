@@ -15,7 +15,7 @@ Center(""" <style>
 </style> """)
 
 
-# # Lecture 1 - Introduction
+# # Introduction
 # 
 # ## Symmetries
 # 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Lecture 4 - Linear representations
+# # Linear representations
 # 
 # ## Matrix groups
 # 
