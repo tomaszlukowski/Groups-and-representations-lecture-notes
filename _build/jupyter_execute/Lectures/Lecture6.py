@@ -137,6 +137,11 @@
 # $$
 # 
 # defines an isomorphism from $V$ to the standard representation of $S_3$.
+# 
+# To conclude, there are only 3 complex irreducible representations of $S_3$:
+# - trivial (one-dimensional) representation
+# - alternating (one-dimensional) representation
+# - standard (two-dimensional) representation
 
 # In[ ]:
 

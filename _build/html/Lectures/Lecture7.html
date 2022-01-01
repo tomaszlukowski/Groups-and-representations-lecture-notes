@@ -43,6 +43,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -246,6 +248,211 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="character-theory">
 <h1><span class="section-number">7. </span>Character Theory<a class="headerlink" href="#character-theory" title="Permalink to this headline">¶</a></h1>
+<p>To provide the complete classification for <span class="math notranslate nohighlight">\(S_n\)</span> we will study the character theory.</p>
+<p>In the analysis of the representations of <span class="math notranslate nohighlight">\(S_3\)</span>, the key thing was to study the eigenvalues of the actions of individual elements of <span class="math notranslate nohighlight">\(S_3\)</span>. Finding individual eigenvalues is howwever quite difficult. Luckily, it is sufficient to consider their sum, the trace of a matrix, which is much easier to calculate.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Trace)</p>
+<p>Let <span class="math notranslate nohighlight">\(\phi:V\to V\)</span> be a linear map of a finite dimensional vector space. The trace of <span class="math notranslate nohighlight">\(\phi\)</span> is the sume of diagonal entries <span class="math notranslate nohighlight">\(a_{11}+a_{22}+\ldots +a_{nn}\)</span> of a matrix representing <span class="math notranslate nohighlight">\(\phi\)</span> in any fixed basis for <span class="math notranslate nohighlight">\(V\)</span>. This is independent of the choice of basis.</p>
+</div>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Character)</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a finite dimensional representation of a group <span class="math notranslate nohighlight">\(G\)</span>. The character of the representation is the function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\chi_V:G\to \mathbb{F}\\
+&amp;g\mapsto \mbox{ trace of } g\mbox{ acting } V
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example (Character)</p>
+<p>Character of <span class="math notranslate nohighlight">\(S_3\)</span>: let us compute the characters of the three irreducible representations of <span class="math notranslate nohighlight">\(S_3\)</span>:</p>
+<ul class="simple">
+<li><p>the trivial representation <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(S_3\)</span> is one-dimensional and take the value <span class="math notranslate nohighlight">\((1)\)</span> for all elements in <span class="math notranslate nohighlight">\(S_3\)</span>. Its character is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\chi_T=(\chi_T(e),\chi_T((12)),\chi_T((13)),\chi_T((23)),\chi_T((123)),\chi_T((132)))=(1,1,1,1,1,1)
+\]</div>
+<ul class="simple">
+<li><p>the alternating representation <span class="math notranslate nohighlight">\(A\)</span> of <span class="math notranslate nohighlight">\(S_3\)</span> is one-dimensional and takes the value <span class="math notranslate nohighlight">\((1)\)</span> on all even permutations, and <span class="math notranslate nohighlight">\((-1)\)</span> on all odd permutations</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\chi_A=(\chi_A(e),\chi_A((12)),\chi_A((13)),\chi_A((23)),\chi_A((123)),\chi_A((132)))=(1,-1,-1,-1,1,1)
+\]</div>
+<ul class="simple">
+<li><p>the standard representation <span class="math notranslate nohighlight">\(S\)</span> characters could be found by writing the matrices for the action of each of the six elements in <span class="math notranslate nohighlight">\(S_3\)</span>. However, we can find it using the following fact:</p></li>
+</ul>
+<blockquote>
+<div><p>Let <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be finite dimensional representations of a group <span class="math notranslate nohighlight">\(G\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_{V\oplus W}=\chi_V+\chi_W
+\]</div>
+<p>as functions on <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div></blockquote>
+<p>Now, because the permutation representation <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(S_3\)</span> decomposes as a sum of the trivial representation and the standard representation, we can compute the character of the standard representation using the fact above to get:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_P=(3,1,1,1,0,0)=\chi_{T\oplus S}=\chi_T+\chi_S
+\]</div>
+<p>that implies that</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_S=(3,1,1,1,0,0)-(1,1,1,1,1,1)=(2,0,0,0,-1,-1)
+\]</div>
+<p>All characters of <span class="math notranslate nohighlight">\(S_3\)</span> are summarized in the table below</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|c|c|c|c|c|c}
+&amp;e&amp;(12)&amp;(13)&amp;(23)&amp;(123)&amp;(132)\\
+\hline
+\mbox{trivial}&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\\
+\hline
+\mbox{alternating}&amp;1&amp;-1&amp;-1&amp;-1&amp;1&amp;1\\
+\hline
+\mbox{standard}&amp;2&amp;0&amp;0&amp;0&amp;-1&amp;-1
+\end{array}
+\end{split}\]</div>
+<p>The characters of any representation <span class="math notranslate nohighlight">\(V\)</span> of <span class="math notranslate nohighlight">\(S_3\)</span> can be obtained from these three by decomposing into irreducibles:</p>
+<div class="math notranslate nohighlight">
+\[
+V=T^{a}\oplus A^b\oplus S^c
+\]</div>
+<p>and using</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_V=a \chi_T+b\chi_A+c\chi_S
+\]</div>
+</div>
+<p>Isomorphic representations have the same character, but also the converse is true: the character completely determines the representation up to an isomorphism. Much stronger statement is true: the rows of the character table are orthonormal to each other. This means that if <span class="math notranslate nohighlight">\(\chi_V\)</span> and <span class="math notranslate nohighlight">\(\chi_W\)</span> are characters of irreducible representations of <span class="math notranslate nohighlight">\(G\)</span> then their scalar product is either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(0\)</span>, depending on whether <span class="math notranslate nohighlight">\(V\cong W\)</span> or not.</p>
+<p>This implies that the number of different irreducible representations of <span class="math notranslate nohighlight">\(G\)</span> must be smaller than <span class="math notranslate nohighlight">\(|G|\)</span>. In fact, there is a better bound on the number of irreducible representations of a finite group. Notice that each character takes the same valus on elements with the same cycle structure. This comes from a property of traces that implies that</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_V(hgh^{-1})=\chi_V(g)
+\]</div>
+<p>In other words, if <span class="math notranslate nohighlight">\(g'=h gh^{-1}\)</span> then <span class="math notranslate nohighlight">\(\chi_V(g')=\chi_V(g)\)</span>. We call such elements conjugate to each other and for symmetric groups there is a general statement that two permutations are conjugated if they have the same cycle structure. To avoid redundancy, we can therefore write a simplified character table for <span class="math notranslate nohighlight">\(S_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|c|c|c}
+g&amp;e&amp;(12)&amp;(123)\\
+\hline
+\#&amp;1&amp;3&amp;2\\
+\hline
+\mbox{trivial}&amp;1&amp;1&amp;1\\
+\hline
+\mbox{alternating}&amp;1&amp;-1&amp;1\\
+\hline
+\mbox{standard}&amp;2&amp;0&amp;-1
+\end{array}
+\end{split}\]</div>
+<p>where in the second row we indicated the number of elements in each conjugacy class.</p>
+<p>To summarize, we have the following useful statement: for finite-dimensional representations of a finite group <span class="math notranslate nohighlight">\(G\)</span> we have:</p>
+<ul class="simple">
+<li><p>there are at most <span class="math notranslate nohighlight">\(t\)</span> irreducible representations of <span class="math notranslate nohighlight">\(G\)</span>, where <span class="math notranslate nohighlight">\(t\)</span> is the number of conjugacy classes of <span class="math notranslate nohighlight">\(G\)</span>.
+-each representation is determined (up to an isomorphism) by its character</p></li>
+<li><p>a complex representation <span class="math notranslate nohighlight">\(V\)</span> is irreducible if and only if <span class="math notranslate nohighlight">\(\langle\chi_V,\chi_V\rangle=1\)</span></p></li>
+<li><p>the multiplicity of a complex irreducible representation <span class="math notranslate nohighlight">\(W\)</span> in a representation <span class="math notranslate nohighlight">\(V\)</span> is given by <span class="math notranslate nohighlight">\(\langle \chi_V,\chi_W\rangle\)</span>,</p></li>
+</ul>
+<p>where we defined</p>
+<div class="math notranslate nohighlight">
+\[
+\langle\chi_W,\chi_V\rangle =\frac{1}{|G|}\sum_{g\in G}\chi_W(g)\overline{\chi_V(g)} 
+\]</div>
+<p>where the overline indicates the complex conjugate.</p>
+<p>This provides us with a powerful tool for analysing complex representaions of finite groups. In particular, we can take any representation and decompose it into irreducible representations using the character theory. Let us take the regular representation <span class="math notranslate nohighlight">\(R\)</span> of <span class="math notranslate nohighlight">\(S_3\)</span>. It is a six-dimensional representation obtained by left multiplication by group elements. We already showed that there are only three representation of <span class="math notranslate nohighlight">\(S_3\)</span>: trivial <span class="math notranslate nohighlight">\(T\)</span>, alternating <span class="math notranslate nohighlight">\(A\)</span> and standard <span class="math notranslate nohighlight">\(S\)</span>. Therefore, we have a decomposition</p>
+<div class="math notranslate nohighlight">
+\[
+R\cong T^{a}\oplus A^b\oplus S^c
+\]</div>
+<p>for some non-negative integers <span class="math notranslate nohighlight">\(a,b,c\)</span>. This produces the following relation on characters:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_V=a \chi_T+b\chi_A+c\chi_S
+\]</div>
+<p>The character of the regular representation is <span class="math notranslate nohighlight">\((6,0,0)\)</span>. This leads to a system of linear equations:</p>
+<div class="math notranslate nohighlight">
+\[
+(6,0,0)=a(1,1,1)+b(1,-1,1)+c(2,0,-1)
+\]</div>
+<p>which is solved by: <span class="math notranslate nohighlight">\((a,b,c)=(1,1,2)\)</span>. therefore, the regular representation of <span class="math notranslate nohighlight">\(S_3\)</span> decomposes as:</p>
+<div class="math notranslate nohighlight">
+\[
+R\cong T\oplus A\oplus S^2
+\]</div>
+<p>This statement can be generalised to any finite group:</p>
+<div class="proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>The regular representation <span class="math notranslate nohighlight">\(R\)</span> of any finite group <span class="math notranslate nohighlight">\(G\)</span> decomposes (over <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>) as</p>
+<div class="math notranslate nohighlight">
+\[
+R\cong W_1^{\dim W_1}\oplus W_2^{\dim W_2}\oplus \ldots \oplus W_t^{\dim W_t}
+\]</div>
+<p>with every irreducible representation <span class="math notranslate nohighlight">\(W_i\)</span> appearing exactly <span class="math notranslate nohighlight">\(\dim W_i\)</span> times</p>
+</div>
+<p>This proposition leads to a useful relation:</p>
+<div class="math notranslate nohighlight">
+\[
+|G|=\sum_i(\dim W_i)^2
+\]</div>
+<p>where the sum is taken over all irreducible complex representations of <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<div class="example admonition">
+<p class="admonition-title">Example (Complete classification of irreducible representations of <span class="math notranslate nohighlight">\(D_4\)</span>)</p>
+<p>For <span class="math notranslate nohighlight">\(D_4\)</span> we have <span class="math notranslate nohighlight">\(5\)</span> conjugacy classes of elements:</p>
+<div class="math notranslate nohighlight">
+\[
+C_1=\{e\}\quad C_2=\{A,A^3\}\quad C_3=\{A^2\}\quad C_4=\{B,A^2 B\}\quad C_5=\{AB,A^3 B\}
+\]</div>
+<p>This means that there are <span class="math notranslate nohighlight">\(5\)</span> irreducible complex representations of <span class="math notranslate nohighlight">\(D_4\)</span>. Moreover, we found <span class="math notranslate nohighlight">\(2\)</span> of them already:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|c|c|c|c|c}
+g&amp;C_1&amp;C_2&amp;C_3&amp;C_4&amp;C_5\\
+\hline
+\# &amp;1&amp;2&amp;1&amp;2&amp;2\\
+\hline
+\mbox{trivial}&amp;1&amp;1&amp;1&amp;1&amp;1\\
+\hline
+\mbox{tautological}&amp;2&amp;0&amp;-2&amp;0&amp;0
+\end{array}
+\end{split}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(W_3\)</span>, <span class="math notranslate nohighlight">\(W_4\)</span> and <span class="math notranslate nohighlight">\(W_5\)</span> be the remaining irreducible representation, with dimensions <span class="math notranslate nohighlight">\(w_3,w_4\)</span> and <span class="math notranslate nohighlight">\(w_5\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+|D_4|=8=1^2+2^2+w_1^2+w_4^2+w_5^2
+\]</div>
+<p>that implies that <span class="math notranslate nohighlight">\(w_3=w_4=w_5=1\)</span>. All remaining representaions are one-dimensional. They have the following characters:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c|c|c|c|c|c}
+g&amp;C_1&amp;C_2&amp;c_3&amp;C_4&amp;C_5\\
+\hline
+\#&amp;1&amp;2&amp;1&amp;2&amp;2\\
+\hline
+\mbox{trivial}&amp;1&amp;1&amp;1&amp;1&amp;1\\
+\hline
+\mbox{tautological}&amp;2&amp;0&amp;-2&amp;0&amp;0\\
+\hline
+W_3&amp;1&amp;1&amp;1&amp;-1&amp;-1\\
+\hline
+W_4&amp;1&amp;-1&amp;1&amp;1&amp;-1\\
+\hline
+W_5&amp;1&amp;-1&amp;1&amp;-1&amp;1
+\end{array}
+\end{split}\]</div>
+<p>It is easy to checj that they are orthonormal. For example</p>
+<div class="math notranslate nohighlight">
+\[
+\langle \chi_{W_1},\chi_{W_3}\rangle=\frac{1}{8}(1\cdot 1\cdot 1+2\cdot 1\cdot 1+1\cdot 1\cdot 1+2\cdot 1\cdot (-1)+1\cdot 1\cdot (-1))=0
+\]</div>
+<p>Also</p>
+<div class="math notranslate nohighlight">
+\[
+\langle \chi_{W_3},\chi_{W_3}\rangle=\frac{1}{8}(1\cdot 1\cdot 1+2\cdot 1\cdot 1+1\cdot 1\cdot 1+2\cdot (-1)\cdot (-1)+1\cdot (-1)\cdot (-1))=1
+\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
