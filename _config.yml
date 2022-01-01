@@ -34,6 +34,9 @@ latex:
   latex_documents:
     targetname: book.tex
 
+output:
+  pdf_document:
+    extra_dependencies: ["ytableau"]
 # Add a bibtex file so that we can create citations
 #bibtex_bibfiles:
 #  - references.bib
