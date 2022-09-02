@@ -13,7 +13,12 @@
 # 
 # ## Main example: vibrations of water molecules
 # 
-# >picture
+# ```{image} ../Pictures/fig91.jpg
+# :alt: fishy
+# :class: bg-primary mb-1
+# :width: 200px
+# :align: center
+# ```
 # 
 # This molecule sits in the $y-z$ plane with the $x$-axis pointing towards the reader. 
 # 
