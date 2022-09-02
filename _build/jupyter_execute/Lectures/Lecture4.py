@@ -26,7 +26,7 @@
 # 
 # It is therefore a binary operation.
 # 
-# ```{admonition}
+# ```{admonition} Proposition
 # :class: proposition
 # 
 # We have the following multiplication rules

@@ -13,10 +13,9 @@
 # 
 # ## Main example: vibrations of water molecules
 # 
-# ```{image} ../Pictures/fig91.jpg
-# :alt: fishy
+# ```{image} ../Pictures/fig91.png
 # :class: bg-primary mb-1
-# :width: 200px
+# :width: 600px
 # :align: center
 # ```
 # 
@@ -32,7 +31,7 @@
 # 
 # $$
 # \begin{array}{c||c|c|c|c}
-# \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
+# &E&C_2&\sigma_{yz}&\sigma_{xz}\\
 # \hline
 # \hline
 # E&E&C_2&\sigma_{yz}&\sigma_{xz}\\
@@ -57,7 +56,7 @@
 # 
 # $$
 # \begin{array}{c||c|c|c|c}
-# \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
+# &E&C_2&\sigma_{yz}&\sigma_{xz}\\
 # \hline
 # \hline
 # A_1&1&1&1&1\\
@@ -83,7 +82,7 @@
 # 
 # $$
 # \begin{array}{c||c|c|c|c}
-# \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
+# &E&C_2&\sigma_{yz}&\sigma_{xz}\\
 # \hline
 # \hline
 # \Gamma_9&9&-1&1&3\\
@@ -112,22 +111,29 @@
 # $$
 # 
 # This decomposition can be understood in the following way:
-# - every particle has 3 translational degrees of freedom
-# -- let us translate the molecule along the $y$-axis
+# - every particle has 3 translational degrees of freedom. Let us translate the molecule along the $y$-axis
 # 
-# >picture
+# ```{image} ../Pictures/fig92.png
+# :class: bg-primary mb-1
+# :width: 400px
+# :align: center
+# ```
 # 
 # This defines a representation of $C_{2\nu}$ since 
 # 
-# >picture
+# ```{image} ../Pictures/fig93.png
+# :class: bg-primary mb-1
+# :width: 600px
+# :align: center
+# ```
 # 
 # This is the same action as we found for the irreducible representation $B_2$.
 # 
-# -- Similar for the translations $T_x$ and $T_z$. This can be summarized in the table below
+# Similar for the translations $T_x$ and $T_z$. This can be summarized in the table below
 # 
 # $$
 # \begin{array}{c||c|c|c|c|c}
-# \star&E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
+# &E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
 # \hline
 # \hline
 # T_x&1&-1&1&-1&B_1\\
@@ -138,16 +144,19 @@
 # \end{array}
 # $$
 # 
-# - every particle has three rotational degrees of freedom
-# -- let $R_z$ be the rotation in the plane perpendicular to the $z$-axis
+# - every particle has three rotational degrees of freedom. Let $R_z$ be the rotation in the plane perpendicular to the $z$-axis
 # 
-# >picture 
+# ```{image} ../Pictures/fig94.png
+# :class: bg-primary mb-1
+# :width: 400px
+# :align: center
+# ``` 
 # 
 # We can find the action of all symmetries on these vectors to find 
 # 
 # $$
 # \begin{array}{c||c|c|c|c|c}
-# \star&E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
+# &E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
 # \hline
 # \hline
 # R_x&1&-1&-1&1&B_2\\
@@ -170,7 +179,11 @@
 # 
 # we are left with three vibrational degrees of freedom. They correspond to:
 # 
-# >picture
+# ```{image} ../Pictures/fig95.png
+# :class: bg-primary mb-1
+# :width: 600px
+# :align: center
+# ```
 # 
 # Each of these degrees of freedom will lead to a single normal mode with its own very well-defined frequency and energy that can be measured in experiments.
 # 
