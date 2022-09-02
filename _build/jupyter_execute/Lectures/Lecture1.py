@@ -102,7 +102,7 @@ Center(""" <style>
 # 
 # ## Linear subspaces
 # 
-# When talking about representation theory, we will often consider a vector space of some dimension $n$, and will discuss its linear subspaces. If $V$ is a vector space over a field $K$ and if $W$ is a subset of $V$, then $W$ is a *linear subspace* of $V$ if under the operations of $V$, $W$ is a vector space over $K$. This can be illustrated by the following example
+# When discussing representation theory, we will often consider a vector space of some dimension $n$, and will be interested in its linear subspaces. If $V$ is a vector space over a field $K$ and if $W$ is a subset of $V$, then $W$ is a *linear subspace* of $V$ if under the operations of $V$, $W$ is a vector space over $K$. This can be illustrated by the following example
 # 
 # ```{admonition} Example (Linear subspace)
 # :class: example
