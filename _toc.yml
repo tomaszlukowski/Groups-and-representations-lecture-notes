@@ -8,6 +8,7 @@ options:
   numbered: true
 
 chapters:
+- file: Lectures/Lecture0
 - file: Lectures/Lecture1
 - file: Lectures/Lecture2
 - file: Lectures/Lecture3
