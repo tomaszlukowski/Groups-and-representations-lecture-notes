@@ -26,7 +26,7 @@
 # Multiplication table of this group is:
 # 
 # $$
-# \begin{array}{c||c|c|c|c|}
+# \begin{array}{c||c|c|c|c}
 # \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
 # \hline
 # \hline
@@ -51,7 +51,7 @@
 # In the following we will use the character table for $C_{2\nu}$. The group $C_{2\nu}$ is abelian with four elements, each of which gives one conjugacy class, implying that there are four irreducible representations, all of them one-dimensional:
 # 
 # $$
-# \begin{array}{c||c|c|c|c|}
+# \begin{array}{c||c|c|c|c}
 # \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
 # \hline
 # \hline
@@ -70,6 +70,105 @@
 # $$
 # M_E=\begin{pmatrix}1&0&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0&0\\0&0&1&0&0&0&0&0&0\\0&0&0&1&0&0&0&0&0\\0&0&0&0&1&0&0&0&0\\0&0&0&0&0&1&0&0&0\\0&0&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&1&0\\0&0&0&0&0&0&0&0&1\end{pmatrix} \qquad  M_{C_2}=\begin{pmatrix}-1&0&0&0&0&0&0&0&0\\0&-1&0&0&0&0&0&0&0\\0&0&1&0&0&0&0&0&0\\0&0&0&0&0&0&-1&0&0\\0&0&0&0&0&0&0&-1&0\\0&0&0&0&0&0&0&0&1\\0&0&0&-1&0&0&0&0&0\\0&0&0&0&-1&0&0&0&0\\0&0&0&0&0&1&0&0&0\end{pmatrix}
 # $$
+# $$
+# M_{\sigma_{yz}}=\begin{pmatrix}1&0&0&0&0&0&0&0&0\\0&-1&0&0&0&0&0&0&0\\0&0&1&0&0&0&0&0&0\\0&0&0&1&0&0&0&0&0\\0&0&0&0&-1&0&0&0&0\\0&0&0&0&0&1&0&0&0\\0&0&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&-1&0\\0&0&0&0&0&0&0&0&1\end{pmatrix} \qquad  M_{\sigma_{yz}}=\begin{pmatrix}1&0&0&0&0&0&0&0&0\\0&-1&0&0&0&0&0&0&0\\0&0&1&0&0&0&0&0&0\\0&0&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&-1&0\\0&0&0&0&0&0&0&0&1\\0&0&0&1&0&0&0&0&0\\0&0&0&0&-1&0&0&0&0\\0&0&0&0&0&1&0&0&0\end{pmatrix}
+# $$
+# 
+# We can calculate the characters of this representation
+# 
+# $$
+# \begin{array}{c||c|c|c|c}
+# \star&E&C_2&\sigma_{yz}&\sigma_{xz}\\
+# \hline
+# \hline
+# \Gamma_9&9&-1&1&3\\
+# \end{array}
+# $$
+# 
+# This representation is reducible and can be decomposed into irreducible representations:
+# 
+# $$
+# \langle \chi_{\Gamma_9},\chi_{A_1}\rangle=\frac{1}{4}(9\cdot 1+(-1)\cdot 1+1\cdot 1+3\cdot 1)=\frac{1}{4}(9-1+1+3)=3
+# $$
+# $$
+# \langle \chi_{\Gamma_9},\chi_{A_2}\rangle=\frac{1}{4}(9\cdot 1+(-1)\cdot 1+1\cdot (-1)+3\cdot (-1))=\frac{1}{4}(9-1-1-3)=1
+# $$
+# $$
+# \langle \chi_{\Gamma_9},\chi_{B_1}\rangle=\frac{1}{4}(9\cdot 1+(-1)\cdot(-1)+1\cdot 1+3\cdot (-1))=\frac{1}{4}(9+1+1-3)=2
+# $$
+# $$
+# \langle \chi_{\Gamma_9},\chi_{B_2}\rangle=\frac{1}{4}(9\cdot 1+(-1)\cdot (-1)+1\cdot (-1)+3\cdot 1)=\frac{1}{4}(9+1-1+3)=3
+# $$
+# 
+# Therefore 
+# 
+# $$
+# \Gamma_9=3A_1\oplus A_2\oplus 2B_1\oplus 3B_2
+# $$
+# 
+# This decomposition can be understood in the following way:
+# - every particle has 3 translational degrees of freedom
+# -- let us translate the molecule along the $y$-axis
+# 
+# >picture
+# 
+# This defines a representation of $C_{2\nu}$ since 
+# 
+# >picture
+# 
+# This is the same action as we found for the irreducible representation $B_2$.
+# 
+# -- Similar for the translations $T_x$ and $T_z$. This can be summarized in the table below
+# 
+# $$
+# \begin{array}{c||c|c|c|c|c}
+# \star&E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
+# \hline
+# \hline
+# T_x&1&-1&1&-1&B_1\\
+# \hline
+# T_y&1&-1&-1&1&B_2\\
+# \hline
+# T_z&1&1&1&1&A_1
+# \end{array}
+# $$
+# 
+# - every particle has three rotational degrees of freedom
+# -- let $R_z$ be the rotation in the plane perpendicular to the $z$-axis
+# 
+# >picture 
+# 
+# We can find the action of all symmetries on these vectors to find 
+# 
+# $$
+# \begin{array}{c||c|c|c|c|c}
+# \star&E&C_2&\sigma_{yz}&\sigma_{xz}&irrep\\
+# \hline
+# \hline
+# R_x&1&-1&-1&1&B_2\\
+# \hline
+# R_y&1&-1&1&-1&B_1\\
+# \hline
+# R_z&1&1&-1&-1&A_2
+# \end{array}
+# $$
+# 
+# To summarize:
+# - translations: $\Gamma_{\mathrm{trans}}=A_1\oplus B_1\oplus B_2$
+# - rotations: $\Gamma_{\mathrm{rot}}=A_2\oplus B_1\oplus B_2$
+# 
+# Recall that $\Gamma_9=3A_1\oplus A_2\oplus 2B_1\oplus 3B_2$. Then, after removing the translations and rotations we get:
+# 
+# $$
+# \Gamma_9-\Gamma_{\mathrm{trans}}-\Gamma_{\mathrm{rot}}=2A_1\oplus B_2=:\Gamma_{\mathrm{vib}}
+# $$
+# 
+# we are left with three vibrational degrees of freedom. They correspond to:
+# 
+# >picture
+# 
+# Each of these degrees of freedom will lead to a single normal mode with its own very well-defined frequency and energy that can be measured in experiments.
+# 
 
 # In[ ]:
 
