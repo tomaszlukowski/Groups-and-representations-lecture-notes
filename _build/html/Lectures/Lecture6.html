@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Irreducible representations &#8212; Groups and Representations</title>
+    <title>7. Irreducible representations &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -38,11 +38,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -54,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Character Theory" href="Lecture7.html" />
-    <link rel="prev" title="5. Subrepresentations" href="Lecture5.html" />
+    <link rel="next" title="8. Character Theory" href="Lecture7.html" />
+    <link rel="prev" title="6. Subrepresentations" href="Lecture5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,58 +104,63 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lecture1.html">
+  <a class="reference internal" href="Lecture0.html">
    1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Lecture1.html">
+   2. Linear algebra - crash course
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Lecture2.html">
-   2. Groups
+   3. Groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture3.html">
-   3. Group homomorphisms and group actions
+   4. Group homomorphisms and group actions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture4.html">
-   4. Linear representations
+   5. Linear representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture5.html">
-   5. Subrepresentations
+   6. Subrepresentations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. Irreducible representations
+   7. Irreducible representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture7.html">
-   7. Character Theory
+   8. Character Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture8.html">
-   8. Classification of representations for symmetric groups
+   9. Classification of representations for symmetric groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture9.html">
-   9. Applications of representation theory to physics problems
+   10. Applications of representation theory to physics problems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture10.html">
-   10. Representations of matrix groups
+   11. Representations of matrix groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture11.html">
-   11. Representations of matrix groups relevant to physics
+   12. Representations of matrix groups relevant to physics
   </a>
  </li>
 </ul>
@@ -201,7 +209,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -236,7 +244,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -245,12 +253,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complete-reducibility">
-   6.1. Complete reducibility
+   7.1. Complete reducibility
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classification-of-irreducible-representations-of-finite-groups">
-   6.2. Classification of irreducible representations of finite groups
+   7.2. Classification of irreducible representations of finite groups
   </a>
  </li>
 </ul>
@@ -261,11 +269,39 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Irreducible representations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complete-reducibility">
+   7.1. Complete reducibility
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classification-of-irreducible-representations-of-finite-groups">
+   7.2. Classification of irreducible representations of finite groups
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="irreducible-representations">
-<h1><span class="section-number">6. </span>Irreducible representations<a class="headerlink" href="#irreducible-representations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>Irreducible representations<a class="headerlink" href="#irreducible-representations" title="Permalink to this headline">¶</a></h1>
 <p>We define a class of representations that will provide us with building blocks for all possible representations.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Irreducible representation)</p>
@@ -283,7 +319,7 @@
 <p>The vertex permutation representation of <span class="math notranslate nohighlight">\(D_4\)</span> is not irreducible since the line spanned by the vector <span class="math notranslate nohighlight">\((1,1,1,1)\)</span> is a non-zero proper subrepresentation.</p>
 </div>
 <div class="section" id="complete-reducibility">
-<h2><span class="section-number">6.1. </span>Complete reducibility<a class="headerlink" href="#complete-reducibility" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Complete reducibility<a class="headerlink" href="#complete-reducibility" title="Permalink to this headline">¶</a></h2>
 <p>One of the most important statements in this lecture concern regucibility of finite representations of finite groups.</p>
 <div class="proposition admonition">
 <p class="admonition-title">Proposition</p>
@@ -379,7 +415,7 @@ W_1^{a_1}\oplus \ldots\oplus $W_t^{a_t}$=U_1^{b_1}\oplus \ldots\oplus $U_r^{b_r}
 </div>
 </div>
 <div class="section" id="classification-of-irreducible-representations-of-finite-groups">
-<h2><span class="section-number">6.2. </span>Classification of irreducible representations of finite groups<a class="headerlink" href="#classification-of-irreducible-representations-of-finite-groups" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Classification of irreducible representations of finite groups<a class="headerlink" href="#classification-of-irreducible-representations-of-finite-groups" title="Permalink to this headline">¶</a></h2>
 <p>In this part of the module we want to find all irreducible representaions for finite groups, with special emphasis on symmetric groups <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
 <p>As the starting point, let us try to classify all representations of <span class="math notranslate nohighlight">\(S_2\)</span> over complex numbers. Suppose that <span class="math notranslate nohighlight">\(V\)</span> is a complex representation of <span class="math notranslate nohighlight">\(S_2\)</span>. The group <span class="math notranslate nohighlight">\(S_2\)</span> is generated by one element <span class="math notranslate nohighlight">\(\sigma=(12)\)</span> and therefore to find subrepresentations of <span class="math notranslate nohighlight">\(V\)</span> it is sufficient to find subspaces of <span class="math notranslate nohighlight">\(V\)</span> that are invariant under the action of <span class="math notranslate nohighlight">\(\sigma\)</span>. First considedr the action of <span class="math notranslate nohighlight">\(\sigma\)</span> on <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(v\)</span> be an eigenvector of this action, with the eigenvalue <span class="math notranslate nohighlight">\(\theta\)</span>. Then the subspace spanned by <span class="math notranslate nohighlight">\(v\)</span> is invariant under the action of <span class="math notranslate nohighlight">\(S_2\)</span>, and therefore all representations of <span class="math notranslate nohighlight">\(S_2\)</span> must be one-dimensional. Moreover, since <span class="math notranslate nohighlight">\(\sigma^2\)</span> is the identity element of <span class="math notranslate nohighlight">\(A_2\)</span>, then <span class="math notranslate nohighlight">\(\theta^2=1\)</span> which imples that <span class="math notranslate nohighlight">\(\theta=\pm 1\)</span>. There are only two irreducible complex representations of <span class="math notranslate nohighlight">\(S_2\)</span>:</p>
 <ul class="simple">
@@ -438,37 +474,35 @@ W_1^{a_1}\oplus \ldots\oplus $W_t^{a_t}$=U_1^{b_1}\oplus \ldots\oplus $U_r^{b_r}
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="Lecture5.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Subrepresentations</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Subrepresentations</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lecture7.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Character Theory</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Character Theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Tomasz Lukowski<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Tomasz Lukowski<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

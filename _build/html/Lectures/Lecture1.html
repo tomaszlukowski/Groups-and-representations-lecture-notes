@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Introduction &#8212; Groups and Representations</title>
+    <title>2. Linear algebra - crash course &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -38,11 +38,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -54,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Groups" href="Lecture2.html" />
-    <link rel="prev" title="Groups and Representations" href="../intro.html" />
+    <link rel="next" title="3. Groups" href="Lecture2.html" />
+    <link rel="prev" title="1. Introduction" href="Lecture0.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,59 +103,64 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lecture0.html">
+   1. Introduction
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Introduction
+   2. Linear algebra - crash course
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture2.html">
-   2. Groups
+   3. Groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture3.html">
-   3. Group homomorphisms and group actions
+   4. Group homomorphisms and group actions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture4.html">
-   4. Linear representations
+   5. Linear representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture5.html">
-   5. Subrepresentations
+   6. Subrepresentations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture6.html">
-   6. Irreducible representations
+   7. Irreducible representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture7.html">
-   7. Character Theory
+   8. Character Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture8.html">
-   8. Classification of representations for symmetric groups
+   9. Classification of representations for symmetric groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture9.html">
-   9. Applications of representation theory to physics problems
+   10. Applications of representation theory to physics problems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture10.html">
-   10. Representations of matrix groups
+   11. Representations of matrix groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture11.html">
-   11. Representations of matrix groups relevant to physics
+   12. Representations of matrix groups relevant to physics
   </a>
  </li>
 </ul>
@@ -201,7 +209,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -236,32 +244,24 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#symmetries">
-   1.1. Symmetries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-look-at-groups-and-representations">
-   1.2. First look at groups and representations
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear algebra - crash course</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="cell tag_hide-input docutils container">
@@ -287,148 +287,54 @@
 }
 </style> </div></div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="symmetries">
-<h2><span class="section-number">1.1. </span>Symmetries<a class="headerlink" href="#symmetries" title="Permalink to this headline">¶</a></h2>
-<p><strong>Symmetries</strong> provide one of the key ideas in modern mathematics and physics. They are naturally associated with the notion of <strong>groups</strong>. A typical problem in this context is to construct a system that behaves in a certain way under the action of a symmetry, for example, a system that is invariant under a given symmetry.</p>
-<p>To tackle this kind of problems, we need to know how the symmetries act on the building blocks of systems and these blocks are often the elements of vector spaces, i.e. vectors. This leads to a natural question of how to classify such actions of groups on vector spaces. The mathematical theory that deals with this question is the <strong>representation theory</strong>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-\mathrm{Physics}&amp;&amp;\mathrm{Mathematics}\\
-\mathrm{symmetry}&amp;\leftrightarrow&amp;\mathrm{group}
-\end{array}
-\end{split}\]</div>
-<p>Many systems in classical and quantum physics are invariant under some symmetry operations. We distinguish two types of symmetries: <strong>discrete</strong> and <strong>continuous</strong> symmetries.</p>
-<p>In the first cathegory we have for example</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="linear-algebra-crash-course">
+<h1><span class="section-number">2. </span>Linear algebra - crash course<a class="headerlink" href="#linear-algebra-crash-course" title="Permalink to this headline">¶</a></h1>
+<p>We will start by recalling from linear algebra the definition of a vector space and a linear map. These notion will be crucial in the definition and interpretation of group representations that we will introduce in the following lectures.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Vector space)</p>
+<p>A vector space over a field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>), is a set <span class="math notranslate nohighlight">\(V\)</span> together with two operations: vector addition and multiplication by scalar, that satisfy the following axioms:</p>
 <ul class="simple">
-<li><p>reflection (parity) symmetry</p></li>
-<li><p>discrete rotations</p></li>
-<li><p>time reversal</p></li>
-<li><p>CPT symmetry of the Standard Model</p></li>
+<li><p>addition is commutative, associative, has an identity element and inverses (therefore <span class="math notranslate nohighlight">\(V\)</span> is an abelian group with +)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda(\mu v)=(\lambda\mu)v\)</span> for all <span class="math notranslate nohighlight">\(\lambda,\mu\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v\in  V\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda(v+u)=\lambda v+\lambda u\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v,u\in  V\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\lambda+\mu) v)=\lambda v+\mu v\)</span> for all <span class="math notranslate nohighlight">\(\lambda,\mu\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v\in  V\)</span></p></li>
 </ul>
-<p>Continuous symmetries include:</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Vector space)</p>
 <ul class="simple">
-<li><p>time translations</p></li>
-<li><p>space translations</p></li>
-<li><p>spatial rotations</p></li>
-<li><p>Poincare transformations</p></li>
-<li><p>gauge symmetries of quuntum field theories</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{F}=\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(V=\mathbb{R}^n\)</span> is a vector space over real numbers</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{F}=\mathbb{C}\)</span>, <span class="math notranslate nohighlight">\(V=\mathbb{C}^n\)</span> is a vector space over complex numbers</p></li>
+<li><p>the set <span class="math notranslate nohighlight">\(M_{n\times m}(\mathbb{R})\)</span> of all <span class="math notranslate nohighlight">\(n\times m\)</span> matrices is a vector space</p></li>
 </ul>
-<p>Each symmetry can be described mathematically using groups and their representations.</p>
 </div>
-<div class="section" id="first-look-at-groups-and-representations">
-<h2><span class="section-number">1.2. </span>First look at groups and representations<a class="headerlink" href="#first-look-at-groups-and-representations" title="Permalink to this headline">¶</a></h2>
-<p>Consider the following square in 2D space:</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Polygon</span>
-
-<span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_2=(0,1)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">),</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_1=(1,0)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_3=(-1,0)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$x_4=(0,-1)$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">),</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
+<p>We will be dealing mostly with finite dimensional vector spaces in these lectures. In such case, we can introduce the definition of a basis of a vector space.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Linearly independent vectors)</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be an <span class="math notranslate nohighlight">\(n\)</span>-dimensional vector space and let <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_k\in V\)</span> be vectors. Then we say that these vectors are linearly independent if the vector equation
+$<span class="math notranslate nohighlight">\(
+\alpha_1 v_1+\alpha_2 v_2+\ldots \alpha_k v_k=0
+\)</span><span class="math notranslate nohighlight">\(
+has only the trivial solution \)</span>\alpha_1=\alpha_2=\ldots=\alpha_k$.</p>
 </div>
+<div class="example admonition">
+<p class="admonition-title">Example (Linearly independent vectors)</p>
+<p>Let us take <span class="math notranslate nohighlight">\(V=\mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(v_1=\begin{pmatrix}2\\3\end{pmatrix}\)</span></p>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Lecture1_2_0.png" src="../_images/Lecture1_2_0.png" />
-</div>
-</div>
-<p>It is symmetric under rotations and reflections. For example: the rotation by <span class="math notranslate nohighlight">\(90^\circ\)</span> clockwise does not change the shape of the square. However, it <strong>permutes</strong> its vertices in the following way:</p>
-<div class="math notranslate nohighlight">
-\[x_1\to x_4\to x_3 \to x_2 \to x_1\]</div>
-<p>We associate a <em>permutation</em> to this symmetry: <span class="math notranslate nohighlight">\((1432)\)</span>.</p>
-<p>Another example: lreflection with respect to the <span class="math notranslate nohighlight">\(x\)</span>-axis. It permutes vertices:</p>
-<div class="math notranslate nohighlight">
-\[x_2 \to x_4 \to x_2,\]</div>
-<p>and <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> are unchanged.
-We associate another permutation to this symmetry: <span class="math notranslate nohighlight">\((1)(3)(24)=(24)\)</span>.</p>
-<p>There are 8 such symmetries in total (four rotations and four reflections):</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Linear map)</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(V\)</span> be vector spaces over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Then <span class="math notranslate nohighlight">\(f:U\to V\)</span> is called a linear map if</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(e_1=id\)</span> - identity</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_2=(1432)\)</span> - rotation by <span class="math notranslate nohighlight">\(90^\circ\)</span> clockwise</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_3=(13)(24)\)</span> - rotation by <span class="math notranslate nohighlight">\(180^\circ\)</span> clockwise</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_4=(1234)\)</span> - rotation by <span class="math notranslate nohighlight">\(270^\circ\)</span> clockwise</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_5=(24)\)</span> - <span class="math notranslate nohighlight">\(x\)</span>-axis reflection</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_6=(13)\)</span> - <span class="math notranslate nohighlight">\(y\)</span>-axis reflection</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_7=(14)(23)\)</span> - reflection with respect to the top-left to bottom-right diagonal</p></li>
-<li><p><span class="math notranslate nohighlight">\(e_8=(12)(34)\)</span> - reflection with respect to the top-right to bottom-left diagonal</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(u+v)=f(u)+f(v)\)</span> for all <span class="math notranslate nohighlight">\(u,v\in U\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\lambda u)=\lambda f(u)\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in \mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(u\in U\)</span></p></li>
 </ul>
-<p>Two symmetries applied one after another is also a symmetry: <span class="math notranslate nohighlight">\(e_2\)</span> followed by <span class="math notranslate nohighlight">\(e_2\)</span> is <span class="math notranslate nohighlight">\(e_3\)</span>. We indicate it as</p>
-<div class="math notranslate nohighlight">
-\[e_2 \star e_2 =e_3\]</div>
-<p>where <span class="math notranslate nohighlight">\(\star\)</span> is a multiplication of group elements (binary operation). This can be done using vertex permutations:</p>
-<div class="math notranslate nohighlight">
-\[(1432)\circ(1432) =(13)(24)\]</div>
-<p>where we used the symbol <span class="math notranslate nohighlight">\(\circ\)</span> to indicate multiplication (composition) of permutations.</p>
-<p>One can construct a table collecting all results of multiplications of two symmetries - <strong>Cayley table</strong>.</p>
-<p>This group is called the <strong>dihedral group <span class="math notranslate nohighlight">\(D_4\)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{c||c|c|c|c|c|c|c|c}
-\star&amp;e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6&amp;e_7&amp;e_8\\
-\hline
-\hline
-e_1&amp;e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6&amp;e_7&amp;e_8\\
-\hline
-e_2&amp;e_2&amp;e_3&amp;e_4&amp;e_1&amp;e_7&amp;e_8&amp;e_6&amp;e_5\\
-\hline
-e_3&amp;e_3&amp;e_4&amp;e_1&amp;e_2&amp;e_6&amp;e_5&amp;e_8&amp;e_7\\
-\hline
-e_4&amp;e_4&amp;e_1&amp;e_2&amp;e_3&amp;e_8&amp;e_7&amp;e_5&amp;e_6\\
-\hline
-e_5&amp;e_5&amp;e_8&amp;e_6&amp;e_7&amp;e_1&amp;e_3&amp;e_4&amp;e_2\\
-\hline
-e_6&amp;e_6&amp;e_7&amp;e_5&amp;e_8&amp;e_3&amp;e_1&amp;e_2&amp;e_4\\
-\hline
-e_7&amp;e_7&amp;e_5&amp;e_8&amp;e_6&amp;e_2&amp;e_4&amp;e_1&amp;e_3\\
-\hline
-e_8&amp;e_8&amp;e_6&amp;e_7&amp;e_5&amp;e_4&amp;e_2&amp;e_3&amp;e_1
-\end{array}
-\end{split}\]</div>
-<p>Some important observations from this table:</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Examples (Linear map)</p>
 <ul class="simple">
-<li><p>each element appears only once in each column and in each row</p></li>
-<li><p>the element <span class="math notranslate nohighlight">\(e_1\)</span> acts as the identity element, namely</p></li>
+<li><p>The identity map <span class="math notranslate nohighlight">\(id_U:U\to U\)</span> is a linear map</p></li>
+<li><p>For an <span class="math notranslate nohighlight">\(n\times m\)</span> real matrix <span class="math notranslate nohighlight">\(A\)</span>, we can define a map: <span class="math notranslate nohighlight">\(T_A:\mathbb{R}^n\to\mathbb{R}^m\)</span> as <span class="math notranslate nohighlight">\(T_A(v)=A\cdot v\)</span>. Then <span class="math notranslate nohighlight">\(T_A\)</span> is a linear map.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[e_1 \star e_i=e_i\star e_1=e_i\]</div>
-<ul class="simple">
-<li><p>every element has its inverse, i.e. for each <span class="math notranslate nohighlight">\(e_i\)</span> there exists <span class="math notranslate nohighlight">\(e_j\)</span> such that</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[e_i\star e_j=e_j\star e_i=e_1\]</div>
-<p>These are common properties for all groups.</p>
-<p>Groups are very abstract mathematical objects that are defined as a set with binary operation of its elements satisfying a series of conditions. We are interested in representing these elements in such a way that we can see how group elements act on the square. We can do it by associating <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices to each group element:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-&amp;e_1 \to \begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\qquad &amp; e_2 \to \begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}\qquad
-&amp;e_3 \to \begin{pmatrix}-1&amp;0\\0&amp;-1\end{pmatrix}\qquad &amp; e_4 \to \begin{pmatrix}0&amp;-1\\1&amp;0\end{pmatrix}\\
-&amp;e_5 \to \begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}\qquad &amp; e_6 \to \begin{pmatrix}1&amp;0\\0&amp;-1\end{pmatrix}\qquad
-&amp;e_7 \to \begin{pmatrix}0&amp;-1\\-1&amp;0\end{pmatrix}\qquad &amp; e_8 \to \begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}\\
-\end{align*}
-\end{split}\]</div>
-<p>These matrices satisfy the same multiplication table as the group elements. We call these set of matrices a representation of group <span class="math notranslate nohighlight">\(D_4\)</span>. This is not the only representation and we will discuss many more of them in this module.</p>
 </div>
 </div>
 
@@ -454,37 +360,35 @@ e_8&amp;e_8&amp;e_6&amp;e_7&amp;e_5&amp;e_4&amp;e_2&amp;e_3&amp;e_1
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Lecture0.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Groups and Representations</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lecture2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Groups</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Groups</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Tomasz Lukowski<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Tomasz Lukowski<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

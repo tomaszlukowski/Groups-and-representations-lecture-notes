@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Applications of representation theory to physics problems &#8212; Groups and Representations</title>
+    <title>10. Applications of representation theory to physics problems &#8212; Groups and Representations</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -38,11 +38,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Representations of matrix groups" href="Lecture10.html" />
-    <link rel="prev" title="8. Classification of representations for symmetric groups" href="Lecture8.html" />
+    <link rel="next" title="11. Representations of matrix groups" href="Lecture10.html" />
+    <link rel="prev" title="9. Classification of representations for symmetric groups" href="Lecture8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -99,58 +102,63 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Lecture1.html">
+  <a class="reference internal" href="Lecture0.html">
    1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Lecture1.html">
+   2. Linear algebra - crash course
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Lecture2.html">
-   2. Groups
+   3. Groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture3.html">
-   3. Group homomorphisms and group actions
+   4. Group homomorphisms and group actions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture4.html">
-   4. Linear representations
+   5. Linear representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture5.html">
-   5. Subrepresentations
+   6. Subrepresentations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture6.html">
-   6. Irreducible representations
+   7. Irreducible representations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture7.html">
-   7. Character Theory
+   8. Character Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture8.html">
-   8. Classification of representations for symmetric groups
+   9. Classification of representations for symmetric groups
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Applications of representation theory to physics problems
+   10. Applications of representation theory to physics problems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture10.html">
-   10. Representations of matrix groups
+   11. Representations of matrix groups
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Lecture11.html">
-   11. Representations of matrix groups relevant to physics
+   12. Representations of matrix groups relevant to physics
   </a>
  </li>
 </ul>
@@ -199,7 +207,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -234,18 +242,28 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Applications of representation theory to physics problems</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="applications-of-representation-theory-to-physics-problems">
-<h1><span class="section-number">9. </span>Applications of representation theory to physics problems<a class="headerlink" href="#applications-of-representation-theory-to-physics-problems" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10. </span>Applications of representation theory to physics problems<a class="headerlink" href="#applications-of-representation-theory-to-physics-problems" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -270,37 +288,35 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="Lecture8.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8. </span>Classification of representations for symmetric groups</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Classification of representations for symmetric groups</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lecture10.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Representations of matrix groups</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Representations of matrix groups</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Tomasz Lukowski<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Tomasz Lukowski<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

@@ -85,43 +85,6 @@
 # 
 # ## Linear representations
 # 
-# Before defining linear representations of groups, let us recall from linear algebra the definition of a vector space and a linear map.
-# 
-# ```{admonition} Definition (Vector space)
-# :class: definition
-# 
-# A vector space over a field $\mathbb{F}$ ($\mathbb{R}$ or $\mathbb{C}$), is a set $V$ together with two operations: vector addition and multiplication by scalar, that satisfy the following axioms:
-# - addition is commutative, associative, has an identity element and inverses (therefore $V$ is an abelian group with +)
-# - $\lambda(\mu v)=(\lambda\mu)v$ for all $\lambda,\mu\in\mathbb{F}$ and $v\in  V$
-# - $\lambda(v+u)=\lambda v+\lambda u$ for all $\lambda\in\mathbb{F}$ and $v,u\in  V$
-# - $(\lambda+\mu) v)=\lambda v+\mu v$ for all $\lambda,\mu\in\mathbb{F}$ and $v\in  V$
-# ```
-# 
-# ```{admonition} Examples (Vector space)
-# :class: example
-# 
-# - $\mathbb{F}=\mathbb{R}$, $V=\mathbb{R}^n$ is a vector space over real numbers
-# - $\mathbb{F}=\mathbb{C}$, $V=\mathbb{C}^n$ is a vector space over complex numbers
-# - the set $M_{n\times m}(\mathbb{R})$ of all $n\times m$ matrices is a vector space
-# 
-# ```
-# 
-# ```{admonition} Definition (Linear map)
-# :class: definition
-# 
-# Let $U$ and $V$ be vector spaces over $\mathbb{F}$. Then $f:U\to V$ is called a linear map if
-# - $f(u+v)=f(u)+f(v)$ for all $u,v\in U$
-# - $f(\lambda u)=\lambda f(u)$ for all $\lambda\in \mathbb{F}$ and $u\in U$
-# 
-# ```
-# 
-# ```{admonition} Examples (Linear map)
-# :class: example
-# 
-# - The identity map $id_U:U\to U$ is a linear map
-# - For an $n\times m$ real matrix $A$, we can define a map: $T_A:\mathbb{R}^n\to\mathbb{R}^m$ as $T_A(v)=A\cdot v$. Then $T_A$ is a linear map.
-# 
-# ```
 # 
 # Our goal is to define a mathematical structure that facilitates the action of groups on vector spaces. The first step is to observe that the set $GL(V)$ of invertible linear maps $V\to V$ on an $n$-dimensional vector space $V$ over a field $\mathbb{F}$ forms a group, called the general linear group of $V$.The group multiplication is composition of maps, the identity element is the identity map and the iverse is the map inverse.
 # 
