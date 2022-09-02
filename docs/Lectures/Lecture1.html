@@ -267,8 +267,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#direct-sum-of-linear-subspaces">
+   2.3. Direct sum of linear subspaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-maps">
-   2.3. Linear maps
+   2.4. Linear maps
   </a>
  </li>
 </ul>
@@ -302,8 +307,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#direct-sum-of-linear-subspaces">
+   2.3. Direct sum of linear subspaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-maps">
-   2.3. Linear maps
+   2.4. Linear maps
   </a>
  </li>
 </ul>
@@ -427,16 +437,15 @@ w_1+w_2=(x_1,\frac{3}{2}x_1)+(x_2,\frac{3}{2}x_2)=(x_1+x_2,\frac{3}{2}(x_1+x_2))
 \lambda w=\lambda (x,\frac{3}{2}x)=(\lambda x,\frac{3}{2}\lambda x)=(x' ,\frac{3}{2}x')
 \]</div>
 <p>for <span class="math notranslate nohighlight">\(x'=\lambda x\in \mathbb{R}\)</span>. Therefore, <span class="math notranslate nohighlight">\(\lambda w\in W\)</span>.</p>
-<p>It is find a basis of <span class="math notranslate nohighlight">\(W\)</span>. Since <span class="math notranslate nohighlight">\(\dim(W)=1\)</span> then it is sufficient to find a single linearly independent vector. As an example we can take <span class="math notranslate nohighlight">\(w=(2,3)\)</span>.</p>
+<p>It is also easy to find a basis of <span class="math notranslate nohighlight">\(W\)</span>. Since <span class="math notranslate nohighlight">\(\dim(W)=1\)</span> then it is sufficient to find a single linearly independent vector. As an example we can take <span class="math notranslate nohighlight">\(w=(2,3)\)</span>.</p>
 <p>Moreover, the linear subspace <span class="math notranslate nohighlight">\(W\)</span> can be easily visualized on a real plane (that is <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>). It is just the straight line in the picture below</p>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
-<span class="c1"># 1st line</span>
 <span class="n">point_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">point_2</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
 
@@ -460,11 +469,24 @@ w_1+w_2=(x_1,\frac{3}{2}x_1)+(x_2,\frac{3}{2}x_2)=(x_1+x_2,\frac{3}{2}(x_1+x_2))
 </div>
 </div>
 </div>
+<div class="section" id="direct-sum-of-linear-subspaces">
+<h2><span class="section-number">2.3. </span>Direct sum of linear subspaces<a class="headerlink" href="#direct-sum-of-linear-subspaces" title="Permalink to this headline">¶</a></h2>
+<p>One additional notion from linear algebra that will be very useful to us is a direct sum of vector spaces.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition (Direct sum of vector spaces)</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Let <span class="math notranslate nohighlight">\(W_1\)</span> and <span class="math notranslate nohighlight">\(W_2\)</span> be two linear subspaces of <span class="math notranslate nohighlight">\(V\)</span>. We define the <strong>direct sum</strong> <span class="math notranslate nohighlight">\(W_1\oplus W_2\)</span> of <span class="math notranslate nohighlight">\(W_1\)</span> and <span class="math notranslate nohighlight">\(W_2\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+W_1\oplus W_2=\{w_1+w_2:w_1\in W_1,w_2\in W_2\in\}
+\]</div>
+</div>
+</div>
 <div class="section" id="linear-maps">
-<h2><span class="section-number">2.3. </span>Linear maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Linear maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we recall the notion of a linear map between two vector spaces:</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Linear map)</p>
-<p>Let <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(V\)</span> be vector spaces over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Then <span class="math notranslate nohighlight">\(f:U\to V\)</span> is called a linear map if</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(V\)</span> be vector spaces over the field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Then <span class="math notranslate nohighlight">\(f:U\to V\)</span> is called a linear map if</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(u+v)=f(u)+f(v)\)</span> for all <span class="math notranslate nohighlight">\(u,v\in U\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(\lambda u)=\lambda f(u)\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in \mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(u\in U\)</span></p></li>

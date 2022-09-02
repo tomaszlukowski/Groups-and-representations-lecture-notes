@@ -129,7 +129,7 @@ Center(""" <style>
 # 
 # for $x'=\lambda x\in \mathbb{R}$. Therefore, $\lambda w\in W$.
 # 
-# It is find a basis of $W$. Since $\dim(W)=1$ then it is sufficient to find a single linearly independent vector. As an example we can take $w=(2,3)$. 
+# It is also easy to find a basis of $W$. Since $\dim(W)=1$ then it is sufficient to find a single linearly independent vector. As an example we can take $w=(2,3)$. 
 # 
 # Moreover, the linear subspace $W$ can be easily visualized on a real plane (that is $\mathbb{R}^2$). It is just the straight line in the picture below
 # 
@@ -142,7 +142,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# 1st line
 point_1 = [4,6]
 point_2 = [-4,-6]
 
@@ -160,12 +159,28 @@ plt.plot(x_values, y_values, 'red')
 plt.show()
 
 
+# ## Direct sum of linear subspaces
+# 
+# One additional notion from linear algebra that will be very useful to us is a direct sum of vector spaces. 
+# 
+# ```{admonition} Definition (Direct sum of vector spaces)
+# :class: definition
+# 
+# Let $V$ be a vector space over the field $\mathbb{F}$. Let $W_1$ and $W_2$ be two linear subspaces of $V$. We define the **direct sum** $W_1\oplus W_2$ of $W_1$ and $W_2$ as
+# 
+# $$
+# W_1\oplus W_2=\{w_1+w_2:w_1\in W_1,w_2\in W_2\in\}
+# $$
+# ```
+# 
 # ## Linear maps
+# 
+# Finally, we recall the notion of a linear map between two vector spaces:
 # 
 # ```{admonition} Definition (Linear map)
 # :class: definition
 # 
-# Let $U$ and $V$ be vector spaces over $\mathbb{F}$. Then $f:U\to V$ is called a linear map if
+# Let $U$ and $V$ be vector spaces over the field $\mathbb{F}$. Then $f:U\to V$ is called a linear map if
 # - $f(u+v)=f(u)+f(v)$ for all $u,v\in U$
 # - $f(\lambda u)=\lambda f(u)$ for all $\lambda\in \mathbb{F}$ and $u\in U$
 # 

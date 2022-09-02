@@ -46,6 +46,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -249,6 +251,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-example-vibrations-of-water-molecules">
+   10.1. Main example: vibrations of water molecules
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -261,6 +276,19 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-example-vibrations-of-water-molecules">
+   10.1. Main example: vibrations of water molecules
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -269,6 +297,72 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="applications-of-representation-theory-to-physics-problems">
 <h1><span class="section-number">10. </span>Applications of representation theory to physics problems<a class="headerlink" href="#applications-of-representation-theory-to-physics-problems" title="Permalink to this headline">¶</a></h1>
+<p>Representation theory can be used in many problems in physics to simplify calculations:</p>
+<ul class="simple">
+<li><p>molecular physics</p></li>
+<li><p>crystallography</p></li>
+<li><p>quantum mechanics</p></li>
+<li><p>particle physics</p></li>
+<li><p>…</p></li>
+<li><p>any system with a symmetry</p></li>
+</ul>
+<div class="section" id="main-example-vibrations-of-water-molecules">
+<h2><span class="section-number">10.1. </span>Main example: vibrations of water molecules<a class="headerlink" href="#main-example-vibrations-of-water-molecules" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>picture</p>
+</div></blockquote>
+<p>This molecule sits in the <span class="math notranslate nohighlight">\(y-z\)</span> plane with the <span class="math notranslate nohighlight">\(x\)</span>-axis pointing towards the reader.</p>
+<p>There are four symmetries of this molecule:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E\)</span>: identity</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_2\)</span>: rotation by <span class="math notranslate nohighlight">\(\pi\)</span> in the <span class="math notranslate nohighlight">\(x-y\)</span> plane</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{yz}\)</span>: reflection with respect to the <span class="math notranslate nohighlight">\(y-z\)</span> plane</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{xz}\)</span>: reflection with respect to the <span class="math notranslate nohighlight">\(x=z\)</span> plane located at the oxygen atom</p></li>
+</ul>
+<p>Multiplication table of this group is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c||c|c|c|c|}
+\star&amp;E&amp;C_2&amp;\sigma_{yz}&amp;\sigma_{xz}\\
+\hline
+\hline
+E&amp;E&amp;C_2&amp;\sigma_{yz}&amp;\sigma_{xz}\\
+\hline
+C_2&amp;C_2&amp;E&amp;\sigma_{xz}&amp;\sigma_{yz}\\
+\hline
+\sigma_{yz}&amp;\sigma_{yz}&amp;\sigma_{xz}&amp;E&amp;C_2\\
+\hline
+\sigma_{xz}&amp;\sigma_{xz}&amp;\sigma_{yz}&amp;C_2&amp;E
+\end{array}
+\end{split}\]</div>
+<p>This group of symmetries is called <span class="math notranslate nohighlight">\(C_{2\nu}\)</span> and it is isomorphic to the group <span class="math notranslate nohighlight">\(\mathbb{Z}_2\times \mathbb{Z}_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbb{Z}_2\times \mathbb{Z}_2=\{(0,0),(0,1),(1,0),(1,1)\}
+\]</div>
+<p>with the binary operation given by addition of these two-dimensional vectors modulo 2.</p>
+<p>In the following we will use the character table for <span class="math notranslate nohighlight">\(C_{2\nu}\)</span>. The group <span class="math notranslate nohighlight">\(C_{2\nu}\)</span> is abelian with four elements, each of which gives one conjugacy class, implying that there are four irreducible representations, all of them one-dimensional:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{c||c|c|c|c|}
+\star&amp;E&amp;C_2&amp;\sigma_{yz}&amp;\sigma_{xz}\\
+\hline
+\hline
+A_1&amp;1&amp;1&amp;1&amp;1\\
+\hline
+A_2&amp;1&amp;1&amp;-1&amp;-1\\
+\hline
+B_1&amp;1&amp;-1&amp;1&amp;-1\\
+\hline
+B_2&amp;1&amp;-1&amp;-1&amp;1
+\end{array}
+\end{split}\]</div>
+<p>Looking back at the water molecule, we can construct the representation generated by the nine vectors in the figure above: <span class="math notranslate nohighlight">\((x_O,y_O,z_O,x_H,y_H,z_H,\tilde{x}_H,\tilde{y}_H,\tilde{z}_H)\)</span>. This provides the following nine dimensional representation <span class="math notranslate nohighlight">\(\Gamma_9\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M_E=\begin{pmatrix}1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\end{pmatrix} \qquad  M_{C_2}=\begin{pmatrix}-1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;-1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;-1&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;-1&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\0&amp;0&amp;0&amp;-1&amp;0&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;-1&amp;0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0\end{pmatrix}
+\end{split}\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
