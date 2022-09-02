@@ -43,7 +43,7 @@ Center(""" <style>
 # * space translations
 # * spatial rotations
 # * Poincare transformations
-# * gauge symmetries of quuntum field theories
+# * gauge symmetries of quantum field theories
 # 
 # Each symmetry can be described mathematically using groups and their representations.
 # 
@@ -85,7 +85,7 @@ plt.show()
 # 
 # We associate a *permutation* to this symmetry: $(1432)$.
 # 
-# Another example: lreflection with respect to the $x$-axis. It permutes vertices:
+# Another example: reflection with respect to the $x$-axis. It permutes vertices:
 # 
 # $$x_2 \to x_4 \to x_2,$$
 # 
@@ -112,9 +112,7 @@ plt.show()
 # 
 # where we used the symbol $\circ$ to indicate multiplication (composition) of permutations.
 # 
-# One can construct a table collecting all results of multiplications of two symmetries - **Cayley table**.
-# 
-# This group is called the **dihedral group $D_4$**
+# One can construct a table collecting all results of multiplications of two symmetries - **Cayley table**:
 # 
 # $$
 # \begin{array}{c||c|c|c|c|c|c|c|c}
@@ -138,6 +136,8 @@ plt.show()
 # e_8&e_8&e_6&e_7&e_5&e_4&e_2&e_3&e_1
 # \end{array}
 # $$
+# 
+# This group is called the **dihedral group $D_4$**.
 # 
 # Some important observations from this table:
 # * each element appears only once in each column and in each row
