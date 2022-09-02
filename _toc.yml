@@ -7,16 +7,20 @@ root: intro
 options:
   numbered: true
 
-chapters:
-- file: Lectures/Lecture0
-- file: Lectures/Lecture1
-- file: Lectures/Lecture2
-- file: Lectures/Lecture3
-- file: Lectures/Lecture4
-- file: Lectures/Lecture5
-- file: Lectures/Lecture6
-- file: Lectures/Lecture7
-- file: Lectures/Lecture8
-- file: Lectures/Lecture9
-- file: Lectures/Lecture10
-- file: Lectures/Lecture11
+
+parts:
+- caption: Lectures
+  numbered: true
+  chapters:
+    - file: Lectures/Lecture0
+    - file: Lectures/Lecture1
+    - file: Lectures/Lecture2
+    - file: Lectures/Lecture3
+    - file: Lectures/Lecture4
+    - file: Lectures/Lecture5
+    - file: Lectures/Lecture6
+    - file: Lectures/Lecture7
+    - file: Lectures/Lecture8
+    - file: Lectures/Lecture9
+    - file: Lectures/Lecture10
+    - file: Lectures/Lecture11
