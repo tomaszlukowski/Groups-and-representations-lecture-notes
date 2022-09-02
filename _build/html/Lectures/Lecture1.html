@@ -261,6 +261,16 @@
    2.1. Vector spaces
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-subspaces">
+   2.2. Linear subspaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-maps">
+   2.3. Linear maps
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -284,6 +294,16 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vector-spaces">
    2.1. Vector spaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-subspaces">
+   2.2. Linear subspaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-maps">
+   2.3. Linear maps
   </a>
  </li>
 </ul>
@@ -325,14 +345,18 @@
 <h2><span class="section-number">2.1. </span>Vector spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">¶</a></h2>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Vector space)</p>
-<p>A vector space over a field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>), is a set <span class="math notranslate nohighlight">\(V\)</span> together with two operations: vector addition and multiplication by scalar, that satisfy the following axioms:</p>
+<p>A <em>vector space</em> over a field <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>), is a set <span class="math notranslate nohighlight">\(V\)</span> together with two operations: vector addition and multiplication by scalar, that satisfy the following axioms:</p>
 <ul class="simple">
-<li><p>addition is commutative, associative, has an identity element and inverses (therefore <span class="math notranslate nohighlight">\(V\)</span> is an abelian group with +)</p></li>
+<li><p>vector addition is commutative: <span class="math notranslate nohighlight">\(v+u=u+v\)</span> for all <span class="math notranslate nohighlight">\(u,v\in V\)</span></p></li>
+<li><p>vector addition is associative: <span class="math notranslate nohighlight">\((v+u)+w=v+(u+w)\)</span> for all <span class="math notranslate nohighlight">\(v,u,w\in V\)</span></p></li>
+<li><p>vector addition has an identity element (zero vector 0) satisfying <span class="math notranslate nohighlight">\(v+0=0+v=v\)</span> for all <span class="math notranslate nohighlight">\(v\in V\)</span></p></li>
+<li><p>vector addition has inverses: for all <span class="math notranslate nohighlight">\(v\in V\)</span> there exists <span class="math notranslate nohighlight">\(u\in V\)</span> such that <span class="math notranslate nohighlight">\(v+u=u+v=0\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lambda(\mu v)=(\lambda\mu)v\)</span> for all <span class="math notranslate nohighlight">\(\lambda,\mu\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v\in  V\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lambda(v+u)=\lambda v+\lambda u\)</span> for all <span class="math notranslate nohighlight">\(\lambda\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v,u\in  V\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((\lambda+\mu) v)=\lambda v+\mu v\)</span> for all <span class="math notranslate nohighlight">\(\lambda,\mu\in\mathbb{F}\)</span> and <span class="math notranslate nohighlight">\(v\in  V\)</span></p></li>
 </ul>
 </div>
+<p><span class="math notranslate nohighlight">\(n\)</span>-dimensional Euclidean spaces arem the most familiar examples of vector spaces. However, there are a lot more spaces and operations that satisfy these axioms.</p>
 <div class="example admonition">
 <p class="admonition-title">Examples (Vector space)</p>
 <ul class="simple">
@@ -341,7 +365,7 @@
 <li><p>the set <span class="math notranslate nohighlight">\(M_{n\times m}(\mathbb{R})\)</span> of all <span class="math notranslate nohighlight">\(n\times m\)</span> matrices is a vector space</p></li>
 </ul>
 </div>
-<p>We will be dealing mostly with finite dimensional vector spaces in these lectures. In such case, we can introduce the definition of a basis of a vector space.</p>
+<p>We will be dealing mostly with finite dimensional vector spaces in these lectures. In such a case, we can introduce the notion of a basis of a vector space. We start by defining what we mean by linearly independent vectors:</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Linearly independent vectors)</p>
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be an <span class="math notranslate nohighlight">\(n\)</span>-dimensional vector space and let <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_k\in V\)</span> be vectors. Then we say that these vectors are linearly independent if the vector equation</p>
@@ -349,7 +373,7 @@
 \[
 \alpha_1 v_1+\alpha_2 v_2+\ldots \alpha_k v_k=0
 \]</div>
-<p>has only the trivial solution <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=\ldots=\alpha_k\)</span>.</p>
+<p>has only the trivial solution <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=\ldots=\alpha_k=0\)</span>.</p>
 </div>
 <div class="example admonition">
 <p class="admonition-title">Example (Linearly independent vectors)</p>
@@ -361,25 +385,83 @@
 <p>and to have <span class="math notranslate nohighlight">\(\alpha_1 v_1+\alpha_2 v_2=0\)</span> we need to solve two equations:</p>
 <div class="math notranslate nohighlight">
 \[
-2 \alpha_1-\alpha_2=0\qquad 3\alpha_1+\alpha_2=0
+2 \alpha_1-\alpha_2=0,\qquad 3\alpha_1+\alpha_2=0
 \]</div>
 <p>The only solution is <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=0\)</span>.</p>
-<p>On the other hand, vectors <span class="math notranslate nohighlight">\(v_2\)</span> and <span class="math notranslate nohighlight">\(v_3\)</span> are not linearly independent (they are linearly dependent), since for example <span class="math notranslate nohighlight">\(v_2+v_3=0\)</span>.</p>
+<p>On the other hand, vectors <span class="math notranslate nohighlight">\(v_2\)</span> and <span class="math notranslate nohighlight">\(v_3\)</span> are not linearly independent (therefore they are linearly dependent), since for example <span class="math notranslate nohighlight">\(v_2+v_3=0\)</span>.</p>
 </div>
 <p>Finally, we can define a basis of a vector space as</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Basis of vector space)</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be an <span class="math notranslate nohighlight">\(n\)</span>-dimensional vector space. Any of set of <span class="math notranslate nohighlight">\(n\)</span> linearly independent vectors <span class="math notranslate nohighlight">\(v_1,v_2,\ldots , v_n\)</span> in <span class="math notranslate nohighlight">\(V\)</span> is called the basis of <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be an <span class="math notranslate nohighlight">\(n\)</span>-dimensional vector space. Any set of <span class="math notranslate nohighlight">\(n\)</span> linearly independent vectors <span class="math notranslate nohighlight">\(v_1,v_2,\ldots , v_n\)</span> in <span class="math notranslate nohighlight">\(V\)</span> is called the basis of <span class="math notranslate nohighlight">\(V\)</span>.</p>
 </div>
-<p>Importantly, given a basis <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_n\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>, it is possible to expand any other vector in <span class="math notranslate nohighlight">\(V\)</span> as a linear combination of the basis vectors. Such linear combination is unique.</p>
+<p>Importantly, given a basis <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_n\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>, it is possible to expand any other vector <span class="math notranslate nohighlight">\(v\in V\)</span> as a linear combination of these basis vectors. Such linear combination is unique.</p>
 <div class="example admonition">
 <p class="admonition-title">Example (Basis of vector space)</p>
-<p>Let us take <span class="math notranslate nohighlight">\(V=\mathbb{R}^2\)</span>. We showed that vectors <span class="math notranslate nohighlight">\(v_1=\begin{pmatrix}2\\3\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(v_2=\begin{pmatrix}-1\\1\end{pmatrix}\)</span> are linearly independent. Therefore, <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> form a basis of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Any other vector in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> can be written as a linear combination of this two vectors. For example, let us take <span class="math notranslate nohighlight">\(v=\begin{pmatrix}5\\7\end{pmatrix}\)</span>. Then</p>
+<p>Let us take <span class="math notranslate nohighlight">\(V=\mathbb{R}^2\)</span>. We showed that the vectors <span class="math notranslate nohighlight">\(v_1=\begin{pmatrix}2\\3\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(v_2=\begin{pmatrix}-1\\1\end{pmatrix}\)</span> are linearly independent. Therefore, <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> form a basis of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Any other vector in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> can be written as a linear combination of these two vectors. For example, let us take <span class="math notranslate nohighlight">\(v=\begin{pmatrix}5\\7\end{pmatrix}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
 v=\frac{12}{5}v_1-\frac{1}{5}v_2
 \]</div>
 </div>
+</div>
+<div class="section" id="linear-subspaces">
+<h2><span class="section-number">2.2. </span>Linear subspaces<a class="headerlink" href="#linear-subspaces" title="Permalink to this headline">¶</a></h2>
+<p>When talking about representation theory, we will often consider a vector space of some dimension <span class="math notranslate nohighlight">\(n\)</span>, and will discuss its linear subspaces. If <span class="math notranslate nohighlight">\(V\)</span> is a vector space over a field <span class="math notranslate nohighlight">\(K\)</span> and if <span class="math notranslate nohighlight">\(W\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>, then <span class="math notranslate nohighlight">\(W\)</span> is a <em>linear subspace</em> of <span class="math notranslate nohighlight">\(V\)</span> if under the operations of <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(W\)</span> is a vector space over <span class="math notranslate nohighlight">\(K\)</span>. This can be illustrated by the following example</p>
+<div class="example admonition">
+<p class="admonition-title">Example (Linear subspace)</p>
+<p>Let <span class="math notranslate nohighlight">\(V=\mathbb{R}^2\)</span>, and let us define a subset of <span class="math notranslate nohighlight">\(V\)</span>: <span class="math notranslate nohighlight">\(W=\{(x,y)\in \mathbb{R}^2:-3x+2y=0\}\)</span>. Then <span class="math notranslate nohighlight">\(W\)</span> is a vector space and therefore a linear subspace of <span class="math notranslate nohighlight">\(V\)</span>. Since the elements of <span class="math notranslate nohighlight">\(W\)</span> are just the 2-dimensional vectors, then the axioms of vector spaces are easily satisfied. The only thing that we need to check is whether <span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition and multiplication by a scalar. Let us first notice that all element of <span class="math notranslate nohighlight">\(W\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+W=\{(x,\frac{3}{2}x):x\in \mathbb{R}\}
+\]</div>
+<p>We start by checking that <span class="math notranslate nohighlight">\(W\)</span> is closed under vector addition. Let us take <span class="math notranslate nohighlight">\(w_1,w_2\in W\)</span>. Then we can write them as <span class="math notranslate nohighlight">\(w_1=(x_1,\frac{3}{2}x_1)\)</span> and <span class="math notranslate nohighlight">\(w_2=(x_2,\frac{3}{2}x_2)\)</span> for some <span class="math notranslate nohighlight">\(x_1,x_2\in \mathbb{R}\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+w_1+w_2=(x_1,\frac{3}{2}x_1)+(x_2,\frac{3}{2}x_2)=(x_1+x_2,\frac{3}{2}(x_1+x_2))=(x_3,\frac{3}{2}x_3)
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(x_3=x_1+x_2\)</span>. Therefore <span class="math notranslate nohighlight">\(w_1+w_2\in W\)</span>.</p>
+<p>Similarly, we can check that <span class="math notranslate nohighlight">\(W\)</span> is closed under the multiplication by a scalar. Let us take <span class="math notranslate nohighlight">\(w\in W\)</span> and <span class="math notranslate nohighlight">\(\lambda\in \mathbb{R}\)</span>. Then <span class="math notranslate nohighlight">\(w=(x,\frac{3}{2}x)\)</span> for some <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda w=\lambda (x,\frac{3}{2}x)=(\lambda x,\frac{3}{2}\lambda x)=(x' ,\frac{3}{2}x')
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(x'=\lambda x\in \mathbb{R}\)</span>. Therefore, <span class="math notranslate nohighlight">\(\lambda w\in W\)</span>.</p>
+<p>It is find a basis of <span class="math notranslate nohighlight">\(W\)</span>. Since <span class="math notranslate nohighlight">\(\dim(W)=1\)</span> then it is sufficient to find a single linearly independent vector. As an example we can take <span class="math notranslate nohighlight">\(w=(2,3)\)</span>.</p>
+<p>Moreover, the linear subspace <span class="math notranslate nohighlight">\(W\)</span> can be easily visualized on a real plane (that is <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>). It is just the straight line in the picture below</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># 1st line</span>
+<span class="n">point_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">point_2</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">x_values</span> <span class="o">=</span> <span class="p">[[</span><span class="n">point_1</span><span class="p">[</span><span class="mi">0</span><span class="p">]],[</span><span class="n">point_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span>
+<span class="n">y_values</span> <span class="o">=</span> <span class="p">[[</span><span class="n">point_1</span><span class="p">[</span><span class="mi">1</span><span class="p">]],[</span><span class="n">point_2</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Lecture1_2_0.png" src="../_images/Lecture1_2_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="linear-maps">
+<h2><span class="section-number">2.3. </span>Linear maps<a class="headerlink" href="#linear-maps" title="Permalink to this headline">¶</a></h2>
 <div class="definition admonition">
 <p class="admonition-title">Definition (Linear map)</p>
 <p>Let <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(V\)</span> be vector spaces over <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Then <span class="math notranslate nohighlight">\(f:U\to V\)</span> is called a linear map if</p>
