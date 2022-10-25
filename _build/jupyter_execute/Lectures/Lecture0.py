@@ -32,7 +32,7 @@ Center(""" <style>
 # 
 # Many systems in classical and quantum physics are invariant under some symmetry operations. We distinguish two types of symmetries: **discrete** and **continuous** symmetries. 
 # 
-# In the first cathegory we have for example
+# In the first category we have for example
 # * reflection (parity) symmetry
 # * discrete rotations
 # * time reversal

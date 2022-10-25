@@ -70,7 +70,7 @@
 # \end{align*}
 # $$
 # 
-# All these matrices are block-diagonal with a two-dimensional block and a one-dimensional block. By multiplying by $M$ from the left and $M^{-1}$ from the right we just changed the basis of the three-dimensional space. This change of basis exposed the seubrepresentations of the permutation representation of $S_3$.
+# All these matrices are block-diagonal with a two-dimensional block and a one-dimensional block. By multiplying by $M$ from the left and $M^{-1}$ from the right we just changed the basis of the three-dimensional space. This change of basis exposed the subrepresentations of the permutation representation of $S_3$.
 # 
 # ```{admonition} Definition (Direct sum of representations)
 # :class: definition
@@ -128,8 +128,8 @@
 # ## Searching for subrepresentations
 # 
 # Let us consider the following four-dimensional representation $V$ of $D_4$ (called the vertex permutation representation):
-# - for the rotation: $A \mapsto \begin{pmatrix}0&0&0&1\\1&0&0&0\\0&1&0&0\\0&0&1&0\end{pmatrix} 
-# - for the horizontal reflection: $B \mapsto \begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix} 
+# - for the rotation: $A \mapsto \begin{pmatrix}0&0&0&1\\1&0&0&0\\0&1&0&0\\0&0&1&0\end{pmatrix} $
+# - for the horizontal reflection: $B \mapsto \begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix} $
 # 
 # The remaining matrices can be found using the fact that we have a group representation, i.e. it is a group homomorphism. For example
 # 
