@@ -15,7 +15,7 @@
 # :class: example
 # 
 # - All one-dimensional representations are irreducible.
-# - The tautological representation $T$ of $D_4$ is irreducible. If there was some proper, non-zero subrepresentation, it would have to be on-dimensional, but no line in the place is left invariant under the action of the symmetry group of the square.
+# - The tautological representation $T$ of $D_4$ is irreducible over real numbers. If there was some proper, non-zero subrepresentation, it would have to be on-dimensional, but no line in the place is left invariant under the action of the symmetry group of the square.
 # ```
 # 
 # ```{admonition} Counterexample (Irreducible representation)
@@ -26,7 +26,7 @@
 # 
 # ## Complete reducibility
 # 
-# One of the most important statements in this lecture concern regucibility of finite representations of finite groups.
+# One of the most important statements in this lecture concern reducibility of finite representations of finite groups.
 # 
 # ```{admonition} Proposition
 # :class: proposition
@@ -101,7 +101,7 @@
 # where each $V_i$ is isomorphic to a direct sum of some number of copies of some fixed irreducible representation $W_i$, with $W_i\neq W_j$ unles $i=j$. That is, given two different decompositions of $V$ into non-isomorphic irreducible subrepresentations
 # 
 # $$
-# W_1^{a_1}\oplus \ldots\oplus $W_t^{a_t}$=U_1^{b_1}\oplus \ldots\oplus $U_r^{b_r}$
+# W_1^{a_1}\oplus \ldots\oplus W_t^{a_t}=U_1^{b_1}\oplus \ldots\oplus U_r^{b_r}
 # $$
 # 
 # where the $W_i$ (respectively $U_i$) are all irreducible and non-isomorphic, then after relabelling $t=r$, $a_i=b_i$, the subrepresentations $W_i^{a_u}$ equal the $U_i^{b_i}$ for all $i$, and the corresponding $W_i$ are isomorphic to $U_i$ for all $i$.
