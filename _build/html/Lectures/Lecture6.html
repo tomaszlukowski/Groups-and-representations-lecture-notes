@@ -316,7 +316,7 @@
 <p class="admonition-title">Examples (Irreducible representation)</p>
 <ul class="simple">
 <li><p>All one-dimensional representations are irreducible.</p></li>
-<li><p>The tautological representation <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> is irreducible over real numbers. If there was some proper, non-zero subrepresentation, it would have to be on-dimensional, but no line in the place is left invariant under the action of the symmetry group of the square.</p></li>
+<li><p>The tautological representation <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(D_4\)</span> is irreducible over real numbers. If there was some proper, non-zero subrepresentation, it would have to be one-dimensional, but no line in the place is left invariant under the action of the symmetry group of the square.</p></li>
 </ul>
 </div>
 <div class="warning admonition">
@@ -325,22 +325,18 @@
 </div>
 <div class="section" id="complete-reducibility">
 <h2><span class="section-number">7.1. </span>Complete reducibility<a class="headerlink" href="#complete-reducibility" title="Permalink to this headline">¶</a></h2>
-<p>One of the most important statements in this lecture concern reducibility of finite representations of finite groups.</p>
+<p>One of the most important statements in this lecture concerns reducibility of finite representations of finite groups.</p>
 <div class="proposition admonition">
 <p class="admonition-title">Proposition</p>
 <p>Every finite-dimensional representation of a finite group over the real or complex numbers decomposes into a direct sum of irreducible subrepresentations.</p>
 </div>
 <p>The key statement for the above proposition is that every subrepresentation of a real or complex representation of a finite group has a representation complement. That is, if <span class="math notranslate nohighlight">\(W\)</span> is a subrepresentation of <span class="math notranslate nohighlight">\(V\)</span>, then there exists another subrepresentation <span class="math notranslate nohighlight">\(W'\)</span> of <span class="math notranslate nohighlight">\(V\)</span> such that <span class="math notranslate nohighlight">\(V\cong W\oplus W'\)</span> as representations of <span class="math notranslate nohighlight">\(G\)</span>.</p>
-<p>We will not prove this proposition in full generality, but instead we provide an algorithm on how to find the representation complement:</p>
-<ol class="simple">
-<li><p>Let <span class="math notranslate nohighlight">\(W\)</span> be a subrepresentation of <span class="math notranslate nohighlight">\(G\)</span> inside a representation <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
-</ol>
+<p>We will not prove this proposition in full generality, but instead we provide an algorithm on how to find the representation complement:
+I. Let <span class="math notranslate nohighlight">\(W\)</span> be a subrepresentation of <span class="math notranslate nohighlight">\(G\)</span> inside a representation <span class="math notranslate nohighlight">\(V\)</span>.</p>
 <blockquote>
 <div><p>As an example, let us take <span class="math notranslate nohighlight">\(V=\mathbb{R}^4\)</span> to be the vertex permutation representation of <span class="math notranslate nohighlight">\(D_4\)</span>, and <span class="math notranslate nohighlight">\(W\)</span> to be the subrepresentation spanned by <span class="math notranslate nohighlight">\((-1,1,-1,1)\)</span>.</p>
 </div></blockquote>
-<ol class="simple">
-<li><p>Fix any vector space complement <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(W\)</span> inside <span class="math notranslate nohighlight">\(V\)</span>, and decompose <span class="math notranslate nohighlight">\(V\)</span> as the direct sum of vector spaces <span class="math notranslate nohighlight">\(V\cong W\oplus U\)</span>.</p></li>
-</ol>
+<p>II. Fix any vector space complement <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(W\)</span> inside <span class="math notranslate nohighlight">\(V\)</span>, and decompose <span class="math notranslate nohighlight">\(V\)</span> as the direct sum of vector spaces <span class="math notranslate nohighlight">\(V\cong W\oplus U\)</span>.</p>
 <blockquote>
 <div><p>Let us take <span class="math notranslate nohighlight">\(U\)</span> to be the subspace in <span class="math notranslate nohighlight">\(\mathbb{R^4}\)</span> consisting of all vectors whose last coordinate is zero. Then any element <span class="math notranslate nohighlight">\((x_1,x_2,x_3,x_4)\in \mathbb{R}^4\)</span> can be decomposed as</p>
 <div class="math notranslate nohighlight">
@@ -348,9 +344,7 @@
 (x_1,x_2,x_3,x_4)=(-x_4,x_4,-x_4,x_4)+(x_1+x_4,x_2-x_4,x_3+x_4,0)\in W\oplus U
 \]</div>
 </div></blockquote>
-<ol class="simple">
-<li><p>The decomposition allows us to define a projection <span class="math notranslate nohighlight">\(\Pi:V\to W\)</span> onto the first factor: for all <span class="math notranslate nohighlight">\(v\in V\)</span> we can write <span class="math notranslate nohighlight">\(v=w+u\)</span> for some <span class="math notranslate nohighlight">\(w\in W\)</span> and <span class="math notranslate nohighlight">\(u\in U\)</span>. Then <span class="math notranslate nohighlight">\(\pi(v)=w\)</span>.</p></li>
-</ol>
+<p>III. The decomposition allows us to define a projection <span class="math notranslate nohighlight">\(\Pi:V\to W\)</span> onto the first factor: for all <span class="math notranslate nohighlight">\(v\in V\)</span> we can write <span class="math notranslate nohighlight">\(v=w+u\)</span> for some <span class="math notranslate nohighlight">\(w\in W\)</span> and <span class="math notranslate nohighlight">\(u\in U\)</span>. Then <span class="math notranslate nohighlight">\(\pi(v)=w\)</span>.</p>
 <blockquote>
 <div><p>In our case</p>
 <div class="math notranslate nohighlight">
@@ -358,9 +352,7 @@
 \Pi((x_1,x_2,x_3,x_4))=(-x_4,x_4,-x_4,x_4)
 \]</div>
 </div></blockquote>
-<ol class="simple">
-<li><p>Define a new linear map <span class="math notranslate nohighlight">\(\phi:V\to W\)</span> obtained by averaging <span class="math notranslate nohighlight">\(\Pi\)</span> over all elements in <span class="math notranslate nohighlight">\(G\)</span>:</p></li>
-</ol>
+<p>IV. Define a new linear map <span class="math notranslate nohighlight">\(\phi:V\to W\)</span> obtained by averaging <span class="math notranslate nohighlight">\(\Pi\)</span> over all elements in <span class="math notranslate nohighlight">\(G\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \phi(v)=\frac{1}{|G|}\sum_{g\in G}g.\Pi(g^{-1}.v)
@@ -386,9 +378,7 @@ g.\Pi(g^{-1}.x)&amp;(-x_4,x_4,-x_4,x_4)&amp;(x_1,-x_1,x_1,-x_1)&amp;(-x_2,x_2,-x
 \phi((x_1,x_2,x_3,x_4))=\frac{1}{8}(2x_1-2x_2+2x_3-2x_4)(1,-1,1,-1)
 \]</div>
 </div></blockquote>
-<ol class="simple">
-<li><p>Find the kernel of <span class="math notranslate nohighlight">\(\phi\)</span> and set <span class="math notranslate nohighlight">\(W'=\mathrm{ker}\phi\)</span>. Then <span class="math notranslate nohighlight">\(W'\)</span> is the representation complement we look for, and <span class="math notranslate nohighlight">\(V\cong W\oplus W'\)</span></p></li>
-</ol>
+<p>V. Find the kernel of <span class="math notranslate nohighlight">\(\phi\)</span> and set <span class="math notranslate nohighlight">\(W'=\mathrm{ker}\phi\)</span>. Then <span class="math notranslate nohighlight">\(W'\)</span> is the representation complement we look for, and <span class="math notranslate nohighlight">\(V\cong W\oplus W'\)</span></p>
 <blockquote>
 <div><p>The kernel of <span class="math notranslate nohighlight">\(\phi\)</span> consists of all vectors that are mapped to <span class="math notranslate nohighlight">\(0\)</span>. Therefore</p>
 <div class="math notranslate nohighlight">
@@ -422,7 +412,7 @@ W_1^{a_1}\oplus \ldots\oplus W_t^{a_t}=U_1^{b_1}\oplus \ldots\oplus U_r^{b_r}
 <div class="section" id="classification-of-irreducible-representations-of-finite-groups">
 <h2><span class="section-number">7.2. </span>Classification of irreducible representations of finite groups<a class="headerlink" href="#classification-of-irreducible-representations-of-finite-groups" title="Permalink to this headline">¶</a></h2>
 <p>In this part of the module we want to find all irreducible representaions for finite groups, with special emphasis on symmetric groups <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
-<p>As the starting point, let us try to classify all representations of <span class="math notranslate nohighlight">\(S_2\)</span> over complex numbers. Suppose that <span class="math notranslate nohighlight">\(V\)</span> is a complex representation of <span class="math notranslate nohighlight">\(S_2\)</span>. The group <span class="math notranslate nohighlight">\(S_2\)</span> is generated by one element <span class="math notranslate nohighlight">\(\sigma=(12)\)</span> and therefore to find subrepresentations of <span class="math notranslate nohighlight">\(V\)</span> it is sufficient to find subspaces of <span class="math notranslate nohighlight">\(V\)</span> that are invariant under the action of <span class="math notranslate nohighlight">\(\sigma\)</span>. First considedr the action of <span class="math notranslate nohighlight">\(\sigma\)</span> on <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(v\)</span> be an eigenvector of this action, with the eigenvalue <span class="math notranslate nohighlight">\(\theta\)</span>. Then the subspace spanned by <span class="math notranslate nohighlight">\(v\)</span> is invariant under the action of <span class="math notranslate nohighlight">\(S_2\)</span>, and therefore all representations of <span class="math notranslate nohighlight">\(S_2\)</span> must be one-dimensional. Moreover, since <span class="math notranslate nohighlight">\(\sigma^2\)</span> is the identity element of <span class="math notranslate nohighlight">\(A_2\)</span>, then <span class="math notranslate nohighlight">\(\theta^2=1\)</span> which imples that <span class="math notranslate nohighlight">\(\theta=\pm 1\)</span>. There are only two irreducible complex representations of <span class="math notranslate nohighlight">\(S_2\)</span>:</p>
+<p>As the starting point, let us try to classify all representations of <span class="math notranslate nohighlight">\(S_2\)</span> over complex numbers. Suppose that <span class="math notranslate nohighlight">\(V\)</span> is a complex representation of <span class="math notranslate nohighlight">\(S_2\)</span>. The group <span class="math notranslate nohighlight">\(S_2\)</span> is generated by one element <span class="math notranslate nohighlight">\(\sigma=(12)\)</span> and therefore to find subrepresentations of <span class="math notranslate nohighlight">\(V\)</span> it is sufficient to find subspaces of <span class="math notranslate nohighlight">\(V\)</span> that are invariant under the action of <span class="math notranslate nohighlight">\(\sigma\)</span>. First consider the action of <span class="math notranslate nohighlight">\(\sigma\)</span> on <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(v\)</span> be an eigenvector of this action, with the eigenvalue <span class="math notranslate nohighlight">\(\theta\)</span>. Then the subspace spanned by <span class="math notranslate nohighlight">\(v\)</span> is invariant under the action of <span class="math notranslate nohighlight">\(S_2\)</span>, and therefore all representations of <span class="math notranslate nohighlight">\(S_2\)</span> must be one-dimensional. Moreover, since <span class="math notranslate nohighlight">\(\sigma^2\)</span> is the identity element of <span class="math notranslate nohighlight">\(A_2\)</span>, then <span class="math notranslate nohighlight">\(\theta^2=1\)</span> which imples that <span class="math notranslate nohighlight">\(\theta=\pm 1\)</span>. There are only two irreducible complex representations of <span class="math notranslate nohighlight">\(S_2\)</span>:</p>
 <ul class="simple">
 <li><p>when <span class="math notranslate nohighlight">\(\theta=1\)</span> then we get the trivial representation</p></li>
 <li><p>when <span class="math notranslate nohighlight">\(\theta=-1\)</span> then we get the alternating representation</p></li>
@@ -433,9 +423,9 @@ W_1^{a_1}\oplus \ldots\oplus W_t^{a_t}=U_1^{b_1}\oplus \ldots\oplus U_r^{b_r}
 \sigma.w=\sigma\tau.v=\tau\sigma^2v=\tau.(\theta^2)v=\theta^2\tau.v=\theta^2w
 \]</div>
 <p>and therefore <span class="math notranslate nohighlight">\(w\)</span> is also an eigenvector of <span class="math notranslate nohighlight">\(\sigma\)</span> with the eigenvalue <span class="math notranslate nohighlight">\(\theta^2\)</span>. It follows that the subspace generated by <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(w\)</span> is invariant under <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>, hence under all of <span class="math notranslate nohighlight">\(S_3\)</span>. In particular, an irreducible complex representation of <span class="math notranslate nohighlight">\(S_3\)</span> over the complex numbers can have dimension no hogher than two.</p>
-<p>Now suppose that <span class="math notranslate nohighlight">\(V\)</span> is irreducible. Since <span class="math notranslate nohighlight">\(\sigma^2\)</span> is the identity element of <span class="math notranslate nohighlight">\(S_3\)</span>, the eigenvalue <span class="math notranslate nohighlight">\(\theta\)</span> must satisfy <span class="math notranslate nohighlight">\(\theta^3=1\)</span>. There are two cases to consider:</p>
+<p>Now suppose that <span class="math notranslate nohighlight">\(V\)</span> is irreducible. Since <span class="math notranslate nohighlight">\(\sigma^3\)</span> is the identity element of <span class="math notranslate nohighlight">\(S_3\)</span>, the eigenvalue <span class="math notranslate nohighlight">\(\theta\)</span> must satisfy <span class="math notranslate nohighlight">\(\theta^3=1\)</span>. There are two cases to consider:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\theta=1\)</span>. Then <span class="math notranslate nohighlight">\(w=v\)</span> because otherwise the subspace spanned by <span class="math notranslate nohighlight">\(v+w\)</span> would be a one-dimensional invariant subspace of <span class="math notranslate nohighlight">\(V\)</span>, and therefore <span class="math notranslate nohighlight">\(V\)</span> would not be irreducible. Then <span class="math notranslate nohighlight">\(V\)</span> is one-dimensional and we know that <span class="math notranslate nohighlight">\(\sigma\)</span> acts triviall on it. Now, since <span class="math notranslate nohighlight">\(\tau^2=e\)</span> we have only two options:</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta=1\)</span>. Then <span class="math notranslate nohighlight">\(w=v\)</span> because otherwise the subspace spanned by <span class="math notranslate nohighlight">\(v+w\)</span> would be a one-dimensional invariant subspace of <span class="math notranslate nohighlight">\(V\)</span>, and therefore <span class="math notranslate nohighlight">\(V\)</span> would not be irreducible. Then <span class="math notranslate nohighlight">\(V\)</span> is one-dimensional and we know that <span class="math notranslate nohighlight">\(\sigma\)</span> acts trivially on it. Now, since <span class="math notranslate nohighlight">\(\tau^2=e\)</span> we have only two options:</p></li>
 <li><p><span class="math notranslate nohighlight">\(\tau\)</span> acts trivially: <span class="math notranslate nohighlight">\(V\)</span> is the trivial representation</p></li>
 <li><p><span class="math notranslate nohighlight">\(\tau\)</span> acts as <span class="math notranslate nohighlight">\(-1\)</span>: <span class="math notranslate nohighlight">\(V\)</span> is the alternating representation</p></li>
 <li><p><span class="math notranslate nohighlight">\(\theta\neq 1\)</span>. In this case <span class="math notranslate nohighlight">\(\theta\neq \theta^2\)</span>, so the vectors <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(w\)</span> have distinct eigenvalues <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\theta^2\)</span>. Moreover, since <span class="math notranslate nohighlight">\(\theta^3=1\)</span> ther <span class="math notranslate nohighlight">\(\theta^2+\theta+1=0\)</span>. Then, the map</p></li>
