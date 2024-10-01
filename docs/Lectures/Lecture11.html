@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/format.css?v=1f79a520" />
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lectures/Lecture11';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -345,6 +347,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="representations-of-matrix-groups-relevant-to-physics">
 <h1><span class="section-number">12. </span>Representations of matrix groups relevant to physics<a class="headerlink" href="#representations-of-matrix-groups-relevant-to-physics" title="Link to this heading">#</a></h1>
+<p>In this lecture we focus on the Lorentz group:
+$<span class="math notranslate nohighlight">\(
+\operatorname{Lor} = \{ A\in\operatorname{GL}_4(\mathbb R)\colon A\eta A^\top=\eta\}
+\)</span><span class="math notranslate nohighlight">\(
+for \)</span>\eta=\operatorname{diag}(-1,1,1,1)$.</p>
+<p>An important observation: the algebra of infinitesimal generators of the Lorentz gorup is isomorphic to the tensor product of the algebra of generators for the group <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+    \text{``}\operatorname{Lor} \cong (\operatorname{SU}_2,\operatorname{SU}_2)\text{''}
+\)</span><span class="math notranslate nohighlight">\(
+Therefore finite-dimensional irreducible representations of \)</span>\operatorname{Lor}$ are labelled by two half-integers (spins).</p>
+<p>We have the following low-dimension irreps:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\overset{\textcolor{blue}{(\bullet,\bullet)}}{(0,0)}\)</span>: this is the trivial representation, sometimes called the <em>scalar representation</em>. It is one-dimensional.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\overset{\textcolor{blue}{(\square,\bullet)}}{(\tfrac12,0)}\)</span>: this is a two-dimensional representation, the so-called <em>left-handed Weyl</em> representation. In physics it is used to describe fermions, for example neutrinos.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\overset{\textcolor{blue}{(\bullet,\square)}}{(0,\tfrac12)}\)</span>: this is the corresponding two-dimensional representation of <em>right-handed Weyl spinors</em>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\overset{\textcolor{blue}{(\square,\square)}}{(\tfrac12,\tfrac12)}\)</span>: this is the four-dimensional <em>fundamental representation</em>. It is used to describe spin-one bosonic particles, for example the electromagnetic field.</p></li>
+<li><p><span class="math notranslate nohighlight">\((m,n)\)</span>: general tensor representations of the Lorentz group. They are <span class="math notranslate nohighlight">\((m+1)\cdot(n+1)\)</span>-dimensional.</p></li>
+<li><p>We can also define the so-called Dirac spinors, that are 4-dimensional and transform as the direct sum of Weyl spinors:
+$<span class="math notranslate nohighlight">\(\underset{\textcolor{blue}{(\square,\bullet)\oplus(\bullet,\square)}}{(\tfrac12,0)\oplus(0,\tfrac12)}\)</span>$</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
