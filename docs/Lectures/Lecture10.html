@@ -372,26 +372,35 @@ document.write(`
 In the following we will focus on <span class="math notranslate nohighlight">\(\operatorname{SU}_n\)</span> and try to find some of their (irreducible) representations.</p></li>
 </ul>
 <p>There are various ways allowing to construct such representations, for example using the theory of Lie groups and their relations to Lie algebras, but we will focus on the method based on the so-called <strong>transplantation of a function</strong>.</p>
-<p>Let us focus on <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>. Consider a set of monomials of degree <span class="math notranslate nohighlight">\(n\)</span> in the two variables <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>:
-$<span class="math notranslate nohighlight">\(x_1^n,x_1^{n-1}x_2,x_1^{n-2}x_2^2,\dotsc,x_1x_2^{n-1},x_2^n\)</span><span class="math notranslate nohighlight">\(
-Every element \)</span>A<span class="math notranslate nohighlight">\( of \)</span>\operatorname{SU}_2<span class="math notranslate nohighlight">\( can be written as
-\)</span><span class="math notranslate nohighlight">\(A=\begin{pmatrix}a&amp;b\\-\bar b&amp;\bar a\end{pmatrix}\text{ where }a\bar a+b\bar b=1\text{ and }a,b\in\mathbb C\)</span><span class="math notranslate nohighlight">\(
-Then
-\)</span><span class="math notranslate nohighlight">\(AA^\dagger=\begin{pmatrix}a&amp;b\\-\bar b&amp;\bar a\end{pmatrix}\cdot\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}=\begin{pmatrix}a\bar a+b\bar b&amp;-ab+ab\\-\bar b\bar a+\bar a\bar b&amp;b\bar b+a\bar a\end{pmatrix}=\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\)</span>$
-as expected.</p>
-<p>Define:
-$<span class="math notranslate nohighlight">\(\begin{pmatrix}y_1\\y_2\end{pmatrix}=A^{-1}\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}\implies\begin{cases}y_1=\bar ax_1-bx_2\\y_2=\bar bx_1+ax_2\end{cases}\)</span><span class="math notranslate nohighlight">\(
-Then every monomial \)</span>y_1^ky_2^{n-k}<span class="math notranslate nohighlight">\( can be expanded in the basis of monomials \)</span>x_1^lx_2^{n-l}<span class="math notranslate nohighlight">\(. The coefficients of this expansion define an \)</span>n\times n<span class="math notranslate nohighlight">\( matrix \)</span>M(A)<span class="math notranslate nohighlight">\( that provides an \)</span>(n+1)<span class="math notranslate nohighlight">\(-dimensional representation of \)</span>\operatorname{SU}_2<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(\operatorname{SU}_2\ni A\mapsto M(A)\in\operatorname{GL}_{n+1}(\mathbb C)\)</span>$</p>
+<p>Let us focus on <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>. Consider a set of monomials of degree <span class="math notranslate nohighlight">\(n\)</span> in the two variables <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_1^n,x_1^{n-1}x_2,x_1^{n-2}x_2^2,\dotsc,x_1x_2^{n-1},x_2^n\]</div>
+<p>Every element <span class="math notranslate nohighlight">\(A\)</span> of <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{pmatrix}a&amp;b\\-\bar b&amp;\bar a\end{pmatrix}\text{ where }a\bar a+b\bar b=1\text{ and }a,b\in\mathbb C\end{split}\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AA^\dagger=\begin{pmatrix}a&amp;b\\-\bar b&amp;\bar a\end{pmatrix}\cdot\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}=\begin{pmatrix}a\bar a+b\bar b&amp;-ab+ab\\-\bar b\bar a+\bar a\bar b&amp;b\bar b+a\bar a\end{pmatrix}=\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}\end{split}\]</div>
+<p>as expected.</p>
+<p>Define:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}y_1\\y_2\end{pmatrix}=A^{-1}\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}\implies\begin{cases}y_1=\bar ax_1-bx_2\\y_2=\bar bx_1+ax_2\end{cases}\end{split}\]</div>
+<p>Then every monomial <span class="math notranslate nohighlight">\(y_1^ky_2^{n-k}\)</span> can be expanded in the basis of monomials <span class="math notranslate nohighlight">\(x_1^lx_2^{n-l}\)</span>. The coefficients of this expansion define an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(M(A)\)</span> that provides an <span class="math notranslate nohighlight">\((n+1)\)</span>-dimensional representation of <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>:
+$<span class="math notranslate nohighlight">\(\operatorname{SU}_2\ni A\mapsto M(A)\in\operatorname{GL}_{n+1}(\mathbb C)\)</span>$</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(n=0\)</span>. The only monomial we get is <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(M(A)=(1)\)</span>. This is the trivial, one-dimensional representation.</p></li>
-<li><p><span class="math notranslate nohighlight">\(n=1\)</span>. There are only two monomials: <span class="math notranslate nohighlight">\(y_1\)</span> and <span class="math notranslate nohighlight">\(y_2\)</span>. Then <span class="math notranslate nohighlight">\(y_1=\bar ax_1-bx_2\)</span>, <span class="math notranslate nohighlight">\(y_2=\bar bx_1+ax_2\)</span> and
-$<span class="math notranslate nohighlight">\(M(A)=\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}\)</span><span class="math notranslate nohighlight">\(
-This is a two-dimensional representation of \operatorname{SU}_2\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(n=2\)</span>. We have three monomials: <span class="math notranslate nohighlight">\(y_1^2\)</span>, <span class="math notranslate nohighlight">\(y_1y_2\)</span>, <span class="math notranslate nohighlight">\(y_2^2\)</span>. Then
-$<span class="math notranslate nohighlight">\(\left.\begin{aligned}
+<li><p><span class="math notranslate nohighlight">\(n=1\)</span>. There are only two monomials: <span class="math notranslate nohighlight">\(y_1\)</span> and <span class="math notranslate nohighlight">\(y_2\)</span>. Then <span class="math notranslate nohighlight">\(y_1=\bar ax_1-bx_2\)</span>, <span class="math notranslate nohighlight">\(y_2=\bar bx_1+ax_2\)</span> and</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}M(A)=\begin{pmatrix}\bar a&amp;-b\\\bar b&amp;a\end{pmatrix}\end{split}\]</div>
+<p>This is a two-dimensional representation of \operatorname{SU}_2$.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n=2\)</span>. We have three monomials: <span class="math notranslate nohighlight">\(y_1^2\)</span>, <span class="math notranslate nohighlight">\(y_1y_2\)</span>, <span class="math notranslate nohighlight">\(y_2^2\)</span>. Then</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left.\begin{aligned}
 y_1^2&amp;=\bar a^2x_1^2-2\bar abx_1x_2+b^2x_2^2\\
 y_1y_2&amp;=\bar a\bar bx_1^2+(a\bar a-b\bar b)x_1x_2-abx_2^2\\
 y_2^2&amp;=\bar b^2x_1^2+2a\bar bx_1x_2+a^2x^2
@@ -399,10 +408,10 @@ y_2^2&amp;=\bar b^2x_1^2+2a\bar bx_1x_2+a^2x^2
 \bar a^2&amp;-2\bar ab&amp;b^2\\
 \bar a\bar b&amp;a\bar a-b\bar b&amp;-ab\\
 \bar b^2&amp;2a\bar b&amp;a^2
-\end{pmatrix}\)</span><span class="math notranslate nohighlight">\(
-This is a three-dimensional representation of \)</span>\operatorname{SU}_2<span class="math notranslate nohighlight">\(. It can be easily checked by checking that:
-\)</span><span class="math notranslate nohighlight">\(M(A)\cdot M(B)=M(A\cdot B)\leftarrow\text{homomorphism condition}\)</span>$</p></li>
-</ul>
+\end{pmatrix}\end{split}\]</div>
+<p>This is a three-dimensional representation of <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>. It can be easily checked by checking that:</p>
+<div class="math notranslate nohighlight">
+\[M(A)\cdot M(B)=M(A\cdot B)\leftarrow\text{homomorphism condition}\]</div>
 </div>
 <p>This way one can construct an <span class="math notranslate nohighlight">\((n+1)\)</span>-dimensional representation <span class="math notranslate nohighlight">\(\theta_n\)</span> of <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span> for all <span class="math notranslate nohighlight">\(n=0,1,2,\dotsc\)</span></p>
 <ul class="simple">
@@ -430,63 +439,76 @@ $<span class="math notranslate nohighlight">\( g.(v_1,v_2)=(g.v_1,g.v_2)\)</span
 <p>This action defines a representation that is <strong>the tensor product of represnetations <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(V_2\)</span></strong>. We will denote this representation <span class="math notranslate nohighlight">\(V_1\otimes V_2\)</span>.</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>For <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span> we can strudy the representation <span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1\)</span>: If <span class="math notranslate nohighlight">\(e_1,e_2\)</span> are the basis vectors of <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(M_{\theta_1}(A)=\begin{pmatrix}\bar a&amp;\bar b\\-b&amp;a\end{pmatrix}\)</span>, then
-$<span class="math notranslate nohighlight">\(\begin{align}
+<p>For <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span> we can strudy the representation <span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1\)</span>: If <span class="math notranslate nohighlight">\(e_1,e_2\)</span> are the basis vectors of <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(M_{\theta_1}(A)=\begin{pmatrix}\bar a&amp;\bar b\\-b&amp;a\end{pmatrix}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
 M_{\theta_1}(A)e_1&amp;=\begin{pmatrix}\bar a&amp;\bar b\\-b&amp;a\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}\bar a\\-b\end{pmatrix}=\bar ae-1-be_2\\
 M_{\theta_1}(A)e_2&amp;=\begin{pmatrix}\bar a&amp;\bar b\\-b&amp;a\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}\bar b\\a\end{pmatrix}=\bar be_1+ae_2
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-Therefore
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
+\end{align}\end{split}\]</div>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
 A.(e_1,e_2)&amp;=(\bar ae_1-be_2,\bar ae_1-be_2)=\bar a^2e_1,e_1)-\bar ab(e_1,e_2)-\bar ab(e_2,e_1)+b^2(e_2,e_2)\\
 A.(e_1,e_2)&amp;=(\bar ae_1,be_2,\bar be_1+ae_2)=\bar a\bar b(e_1,e_1)+\bar aa(e_1,e_2)-b\bar b(e_2,e_1)-ab(e_2,e_2)\\
 A.(e_2,e_1)&amp;=(\bar be_1+ae_2,\bar ae_1-be_2)=\bar a\bar b(e_1,e_1)-b\bar b(e_1,e_2)+a\bar a(e_2,e_1)-ab(e_2,e_2)\\
 A.(e_2,e_2)&amp;=(\bar be_1+ae_2,\bar be_1+ae_2)=\bar b^2(e_1,e_1)+a\bar b(e_1,e_2)+a\bar b(e_2,e_1)+a^2(e_2,e_2)
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-Now, the basis of \)</span>\theta_1\otimes\theta_1<span class="math notranslate nohighlight">\( is:
-\)</span><span class="math notranslate nohighlight">\((e_1,e_1),(e_1,e_2),(e_2,e_1),(e_2,e_2)\)</span><span class="math notranslate nohighlight">\(
-and we get the following 4×4 matrix
-\)</span><span class="math notranslate nohighlight">\(
+\end{align}\end{split}\]</div>
+<p>Now, the basis of <span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1\)</span> is:
+$<span class="math notranslate nohighlight">\((e_1,e_1),(e_1,e_2),(e_2,e_1),(e_2,e_2)\)</span>$
+and we get the following 4×4 matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 M_{\theta_1\otimes\theta_1}=\begin{pmatrix}
 \bar a^2&amp;\bar a\bar b&amp;\bar a\bar b&amp;\bar b^2\\
 -\bar ab&amp;\bar aa&amp;-b\bar b&amp;a\bar b\\
 -\bar ab&amp;\bar aa&amp;-b\bar b&amp;a\bar b\\
 b^2&amp;-ab&amp;-ab&amp;a^2
 \end{pmatrix}
-\)</span><span class="math notranslate nohighlight">\(
-It provides a four-dimensional representation of \)</span>\operatorname{SU}_2<span class="math notranslate nohighlight">\(. This representation is reducible. Notice that
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
+\end{split}\]</div>
+<p>It provides a four-dimensional representation of <span class="math notranslate nohighlight">\(\operatorname{SU}_2\)</span>. This representation is reducible. Notice that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
 \chi_{\theta_1\otimes\chi_1}(A)&amp;=\bar a^2+\bar aa+\bar aa+a^2=\bar a+2a\bar a+a^2\\
 &amp;=\left(\operatorname{Tr}(A)\right)^2=\left(\operatorname{Tr}(A)\right)^2-1+1\\
 &amp;=\chi_{\theta_0}(A)+\chi_{\theta_2}(A)
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-It means that the tensor representation \)</span>\theta_1\otimes\theta_1<span class="math notranslate nohighlight">\( decomposes as:
-\)</span><span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1=\theta_0\oplus\theta_2\)</span>$</p>
+\end{align}\end{split}\]</div>
+<p>It means that the tensor representation <span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1\)</span> decomposes as:
+$<span class="math notranslate nohighlight">\(\theta_1\otimes\theta_1=\theta_0\oplus\theta_2\)</span>$</p>
 </div>
 </section>
 <section id="general-story">
 <h2><span class="section-number">11.3. </span>General story<a class="headerlink" href="#general-story" title="Link to this heading">#</a></h2>
 <p>We will use Young diagrams to study tensor representations of <span class="math notranslate nohighlight">\(\operatorname{SU}_n\)</span>.</p>
-<p>We represent the fundamental representation as a single box:
-$<span class="math notranslate nohighlight">\(\text{fundamental rep of }\operatorname{SU}_n \to \square\)</span>$
-Other representations will be related to more general Young diagrams.</p>
+<p>We represent the fundamental representation as a single box:</p>
+<div class="math notranslate nohighlight">
+\[\text{fundamental rep of }\operatorname{SU}_n \to \square\]</div>
+<p>Other representations will be related to more general Young diagrams.</p>
 </section>
 <section id="rules-for-tensor-products-of-young-diagrams">
 <h2><span class="section-number">11.4. </span>Rules for tensor products of Young diagrams<a class="headerlink" href="#rules-for-tensor-products-of-young-diagrams" title="Link to this heading">#</a></h2>
 <p>We only consider tensor products of a generic Young diagram <span class="math notranslate nohighlight">\(\Gamma\)</span> times the fundamental reprensetation.</p>
 <ol class="arabic simple">
-<li><p>Write down the diagram <span class="math notranslate nohighlight">\(\Gamma\otimes\)</span> a single box
-$<span class="math notranslate nohighlight">\(\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square \right\}\)</span>$</p></li>
-<li><p>Attach the single box on the right of each row of <span class="math notranslate nohighlight">\(\Gamma\)</span>
-$<span class="math notranslate nohighlight">\(\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\textcolor{blue}{\square}=\overset{\displaystyle\square\square\textcolor{blue}{\square}}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
+<li><p>Write down the diagram <span class="math notranslate nohighlight">\(\Gamma\otimes\)</span> a single box</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square \right\}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Attach the single box on the right of each row of <span class="math notranslate nohighlight">\(\Gamma\)</span></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\textcolor{blue}{\square}=\overset{\displaystyle\square\square\textcolor{blue}{\square}}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\textcolor{blue}\square}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square\textcolor{blue}{\square}}{\square\phantom\square}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\underset{\displaystyle\textcolor{blue}\square{\phantom\square}}{\square{\phantom\square}}}{\square\phantom\square}}
-\right\}\)</span>$</p></li>
-<li><p>Remove illegal Young diagrams (i.e. the ones where the number of boxes in rows is not non-increasing.
-$<span class="math notranslate nohighlight">\(\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square=\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
+\right\}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Remove illegal Young diagrams (i.e. the ones where the number of boxes in rows is not non-increasing.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\left\{\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square=\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\square}}
 \oplus
@@ -496,9 +518,12 @@ $<span class="math notranslate nohighlight">\(\left\{\overset{\displaystyle\squa
 \left.\overset{\displaystyle\square\square}{\underset{\displaystyle\square\square}{\square\phantom\square}}\!\!\!\!\!\!\!\!\right/}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\underset{\displaystyle\square{\phantom\square}}{\square{\phantom\square}}}{\square\phantom\square}}
-\right\}\)</span>$</p></li>
-<li><p>If there is any column with exactly <span class="math notranslate nohighlight">\(n\)</span> boxes, then remove this column. For example, assuming we work in <span class="math notranslate nohighlight">\(\operatorname{SU}_4\)</span>, then:
-$<span class="math notranslate nohighlight">\(\left\{
+\right\}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>If there is any column with exactly <span class="math notranslate nohighlight">\(n\)</span> boxes, then remove this column. For example, assuming we work in <span class="math notranslate nohighlight">\(\operatorname{SU}_4\)</span>, then:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
 \begin{aligned}
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square&amp;=\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
 \oplus
@@ -515,14 +540,15 @@ $<span class="math notranslate nohighlight">\(\left\{
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\square}}\oplus\square
 \end{aligned}
-\right\}\)</span>$</p></li>
-</ol>
+\right\}\end{split}\]</div>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>Consider the following tensor product of Young diagrams in <span class="math notranslate nohighlight">\(\operatorname{SU}_3\)</span>:
-$<span class="math notranslate nohighlight">\(\underset{\displaystyle\square{\phantom\square}}{\square\square}\otimes\square\otimes\square \)</span><span class="math notranslate nohighlight">\(
-First calculate
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
+<p>Consider the following tensor product of Young diagrams in <span class="math notranslate nohighlight">\(\operatorname{SU}_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underset{\displaystyle\square{\phantom\square}}{\square\square}\otimes\square\otimes\square \]</div>
+<p>First calculate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
 \underset{\displaystyle\square{\phantom\square}}{\square\square}\otimes\square
 &amp;=\underset{\displaystyle\square\phantom{\square\square}}{\square\square\textcolor{blue}\square}
 \oplus
@@ -533,9 +559,10 @@ First calculate
 \oplus
 \underset{\displaystyle\square\square}{\square\square}
 \oplus\square
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-Then
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
+\end{align}\end{split}\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
 \underset{\displaystyle\square{\phantom\square}}{\square\square}\otimes\square\otimes\square&amp;=
 \left(\underset{\displaystyle\square\phantom{\square\square}}{\square\square\square}
 \oplus
@@ -564,52 +591,60 @@ Then
 2\,\underset{\displaystyle\square\square\phantom\square}{\square\square\square}
 \oplus
 2\,\square\square+2\,\underset{\displaystyle\square}\square
-\end{align}\)</span>$</p>
+\end{align}\end{split}\]</div>
 </div>
 </section>
 <section id="dimensions">
 <h2><span class="section-number">11.5. </span>Dimensions<a class="headerlink" href="#dimensions" title="Link to this heading">#</a></h2>
 <p>Each Young diagram corresponds to an irreducible representation of <span class="math notranslate nohighlight">\(\operatorname{SU}_n\)</span>. There is a simple formula to find the dimension of each representation.</p>
-<p>Let <span class="math notranslate nohighlight">\(\Gamma\)</span> be the Young diagram associated to an irreducible representation <span class="math notranslate nohighlight">\(R\)</span>. Then
-$<span class="math notranslate nohighlight">\(\dim(R)=\frac ND\)</span><span class="math notranslate nohighlight">\(
-To find \)</span>N<span class="math notranslate nohighlight">\( and \)</span>D$, draw two copies of the Young diagram and and fill them up with numbers:</p>
+<p>Let <span class="math notranslate nohighlight">\(\Gamma\)</span> be the Young diagram associated to an irreducible representation <span class="math notranslate nohighlight">\(R\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\dim(R)=\frac ND\]</div>
+<p>To find <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\(D\)</span>, draw two copies of the Young diagram and and fill them up with numbers:</p>
 <ul class="simple">
-<li><p>for <span class="math notranslate nohighlight">\(N\)</span>: start with <span class="math notranslate nohighlight">\(n\)</span> in the top-left corner and fill all boxes with numbers that increase to the right and decrease from top to bottom
-$<span class="math notranslate nohighlight">\(\overset{\displaystyle\boxed{n\phantom{\,+0}}\boxed{n+1}\boxed{n+2}}{\underset{\displaystyle\boxed{n-2}\phantom{\boxed{n+0}\boxed{n+0}}}{\boxed{n-1}\boxed{n\phantom{\,+0}}\phantom{\boxed{n+2}}}}\)</span>$</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(D\)</span>: fill all boxes with the hook lengths
-$<span class="math notranslate nohighlight">\(\overset{\displaystyle\boxed5\boxed3\boxed1}{\underset{\displaystyle\boxed1\phantom{\boxed0\boxed0}}{\boxed3\boxed1\phantom{\boxed0}}}\)</span>$</p></li>
-<li><p>take the product of all entries in the diagram
-$<span class="math notranslate nohighlight">\(\dim\left(\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square\phantom{\square\square}}{\square\square\phantom{\square}}}\right) = \frac{n(n+1)(n+2)(n-1)n(n-2)}{5\cdot3\cdot1\cdot3\cdot1\cdot1}\)</span>$</p></li>
+<li><p>for <span class="math notranslate nohighlight">\(N\)</span>: start with <span class="math notranslate nohighlight">\(n\)</span> in the top-left corner and fill all boxes with numbers that increase to the right and decrease from top to bottom</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[\overset{\displaystyle\boxed{n\phantom{\,+0}}\boxed{n+1}\boxed{n+2}}{\underset{\displaystyle\boxed{n-2}\phantom{\boxed{n+0}\boxed{n+0}}}{\boxed{n-1}\boxed{n\phantom{\,+0}}\phantom{\boxed{n+2}}}}\]</div>
+<ul class="simple">
+<li><p>for <span class="math notranslate nohighlight">\(D\)</span>: fill all boxes with the hook lengths</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\overset{\displaystyle\boxed5\boxed3\boxed1}{\underset{\displaystyle\boxed1\phantom{\boxed0\boxed0}}{\boxed3\boxed1\phantom{\boxed0}}}\]</div>
+<ul class="simple">
+<li><p>take the product of all entries in the diagram</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\dim\left(\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square\phantom{\square\square}}{\square\square\phantom{\square}}}\right) = \frac{n(n+1)(n+2)(n-1)n(n-2)}{5\cdot3\cdot1\cdot3\cdot1\cdot1}\]</div>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>Let us check that the dimensions on both sides of the equation:
-$<span class="math notranslate nohighlight">\(
+<p>Let us check that the dimensions on both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square=\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\square}}\oplus\square
-\)</span><span class="math notranslate nohighlight">\(
-agree, assuming that these are representations of \)</span>\operatorname{SU}_4<span class="math notranslate nohighlight">\(.
-\)</span>$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b6fa8bd-3885-446c-a7ea-bab3bf6bf3d6">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-1b6fa8bd-3885-446c-a7ea-bab3bf6bf3d6" title="Permalink to this equation">#</a></span>\[\begin{align}
+\]</div>
+<p>agree, assuming that these are representations of <span class="math notranslate nohighlight">\(\operatorname{SU}_4\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
 \dim\left(\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\right)&amp;=\left\{\frac{\displaystyle\overset{\displaystyle\boxed4\boxed5}{\underset{\displaystyle\boxed2{\phantom{\boxed0}}}{\boxed3\phantom{\boxed0}}}}{\displaystyle\overset{\displaystyle\boxed4\boxed1}{\underset{\displaystyle\boxed1\phantom{\boxed0}}{\boxed2\phantom{\boxed0}}}}\right\}=\frac{4\!\!\!/\cdot5\cdot3\cdot2\!\!\!/}{4\!\!\!/\cdot2\!\!\!/\cdot1\cdot1}=15\\
 \dim(\square)&amp;=\left\{\frac{\displaystyle\boxed4}{\displaystyle\boxed1}\right\}=\frac41=4\\
 \dim\left(\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}\right)&amp;=\left\{\frac{\displaystyle\overset{\displaystyle\boxed4\boxed5\boxed6}{\underset{\displaystyle\boxed2\phantom{\boxed0\boxed0}}{\boxed3\phantom{\boxed0\boxed0}}}}{\displaystyle\overset{\displaystyle\boxed5\boxed2\boxed1}{\underset{\displaystyle\boxed1{\phantom{\boxed0\boxed0}}}{\boxed2\phantom{\boxed0\boxed0}}}}\right\}=\frac{4\cdot5\!\!\!/\cdot6\cdot3\cdot2\!\!\!/}{5\!\!\!/\cdot2\cdot1\cdot2\!\!\!/\cdot1}=36\\
 \dim\left(\overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\square}}\right)&amp;=\left\{\frac{\displaystyle\overset{\displaystyle\boxed4\boxed5}{\underset{\displaystyle\boxed2\phantom{\boxed0}}{\boxed3\boxed4}}}{\displaystyle\overset{\displaystyle\boxed4\boxed2}{\underset{\displaystyle\boxed1\phantom{\boxed0}}{\boxed3\boxed1}}}\right\}=\frac{4\!\!\!/\cdot5\cdot3\!\!\!/\cdot4\cdot2\!\!\!/}{4\!\!\!/\cdot2\!\!\!/\cdot3\!\!\!/\cdot1\cdot1}=20\\
-\end{align}\]</div>
+\end{align}
+\end{split}\]</div>
+<p>We found:</p>
 <div class="math notranslate nohighlight">
-\[
-We found:
-\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d086e59e-2228-4a50-af52-650c21bc2704">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-d086e59e-2228-4a50-af52-650c21bc2704" title="Permalink to this equation">#</a></span>\[\begin{align}
+\[\begin{split}
+\begin{align}
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\phantom\square}}\otimes\square&amp;=\overset{\displaystyle\square\square\square}{\underset{\displaystyle\square{\phantom{\square\square}}}{\square\phantom{\square\square}}}
 \oplus
 \overset{\displaystyle\square\square}{\underset{\displaystyle\square{\phantom\square}}{\square\square}}\oplus\square\\
 \text{dim:}\qquad15\cdot 4&amp;=36+20+4\qquad\text{✓}
-\end{align}\]</div>
-<p>$$</p>
+\end{align}
+\end{split}\]</div>
 </div>
 </section>
 </section>
